@@ -1,0 +1,1617 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="1 计算机网络概述 计算机网络概念 定义 将具有独立功能的多台计算机通过通信线路连接，实现资源共享和信息传递的计算机系统 组成 终端系统/资源子网: 提供" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/" />
+
+
+    <title>
+        
+            计网复习 :: Arkuna&#39;s nonsense 
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.def75494fa8cd2718b5e0dd47d3050ed33728736e62dfe0df383b520f1794247.css" integrity="sha256-3vdUlPqM0nGLXg3UfTBQ7TNyhzbmLf4N84O1IPF5Qkc=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="计网复习">
+  <meta itemprop="description" content="1 计算机网络概述 计算机网络概念 定义 将具有独立功能的多台计算机通过通信线路连接，实现资源共享和信息传递的计算机系统 组成 终端系统/资源子网: 提供">
+  <meta itemprop="datePublished" content="2024-06-23T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2024-06-23T00:00:00+08:00">
+  <meta itemprop="wordCount" content="13496">
+  <meta itemprop="keywords" content="复习">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="计网复习">
+  <meta name="twitter:description" content="1 计算机网络概述 计算机网络概念 定义 将具有独立功能的多台计算机通过通信线路连接，实现资源共享和信息传递的计算机系统 组成 终端系统/资源子网: 提供">
+
+
+
+    <meta property="og:url" content="https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/">
+  <meta property="og:site_name" content="Arkuna&#39;s nonsense">
+  <meta property="og:title" content="计网复习">
+  <meta property="og:description" content="1 计算机网络概述 计算机网络概念 定义 将具有独立功能的多台计算机通过通信线路连接，实现资源共享和信息传递的计算机系统 组成 终端系统/资源子网: 提供">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2024-06-23T00:00:00+08:00">
+    <meta property="article:modified_time" content="2024-06-23T00:00:00+08:00">
+
+
+
+
+    <meta property="article:section" content="复习" />
+
+
+
+    <meta property="article:published_time" content="2024-06-23 00:00:00 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+    <body>
+        
+
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a
+    href="/"
+    style="text-decoration: none"
+>
+    <div class="logo" lang="en">
+        
+        <span class="logo__mark"
+            >$</span
+        >
+        <span
+            class="logo__text "
+        >
+            cd ~</span
+        >
+        <span
+            class="logo__cursor"
+            style="
+                   
+                   "
+        >
+        </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+             <nav class="menu">
+    <ul class="menu__inner"><li><a href="/tags/">标签</a></li><li><a href="/categories/">分类</a></li><li><a href="/articles/">文章</a></li><li><a href="/posts/">博文</a></li><li><a href="/about/">关于</a></li>
+    </ul>
+</nav>
+
+            <span class="menu-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </span>
+            
+            <span class="theme-toggle not-selectable"
+                ><svg
+    class="theme-toggler"
+    width="24"
+    height="24"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+    />
+</svg>
+</span
+            >
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/">计网复习</a></h2>
+
+            
+            
+            
+                <hr />
+                <aside id="toc">
+                <div class="toc-title">目录</div>
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#计算机网络概念">计算机网络概念</a>
+      <ul>
+        <li><a href="#定义">定义</a></li>
+        <li><a href="#组成">组成</a></li>
+        <li><a href="#网络类型">网络类型</a></li>
+      </ul>
+    </li>
+    <li><a href="#计算机网络体系结构">计算机网络体系结构</a>
+      <ul>
+        <li><a href="#传输方式">传输方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题">习题</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2221-常用编码方式">2.2.2.1 常用编码方式</a></li>
+        <li><a href="#信道的极限容量">信道的极限容量</a></li>
+      </ul>
+    </li>
+    <li><a href="#信道复用技术">信道复用技术</a>
+      <ul>
+        <li><a href="#频分">频分</a></li>
+        <li><a href="#时分">时分</a></li>
+        <li><a href="#码分">码分</a></li>
+        <li><a href="#波分">波分</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题-1">习题</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#差错检测">差错检测</a></li>
+        <li><a href="#csmacd协议多点接入载波监听冲突检测">CSMA/CD协议(多点接入载波监听/冲突检测)</a></li>
+        <li><a href="#以太网交换机自学习功能">以太网交换机自学习功能</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题-2">习题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#422-ip地址">4.2.2 IP地址</a>
+      <ul>
+        <li><a href="#无分类编址-cidr">无分类编址 CIDR</a></li>
+      </ul>
+    </li>
+    <li><a href="#424-地址解析协议-arp">4.2.4 地址解析协议 ARP</a></li>
+    <li><a href="#425-ip数据报格式">4.2.5 IP数据报格式</a>
+      <ul>
+        <li><a href="#首部各字段">首部各字段</a></li>
+      </ul>
+    </li>
+    <li><a href="#431-基于终点的转发">4.3.1 基于终点的转发</a></li>
+    <li><a href="#45-ipv6">4.5 IPv6</a>
+      <ul>
+        <li><a href="#ipv6简写规则">IPv6简写规则</a></li>
+      </ul>
+    </li>
+    <li><a href="#462-内部网关协议rip">4.6.2 内部网关协议(RIP)</a>
+      <ul>
+        <li><a href="#工作原理">工作原理</a></li>
+        <li><a href="#距离向量算法">距离向量算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题-3">习题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#562-超时重传时间的选择">5.6.2 超时重传时间的选择</a>
+      <ul>
+        <li><a href="#加权平均往返rtts">加权平均往返(RTTs)</a></li>
+        <li><a href="#超时重传时间-rto">超时重传时间 RTO</a></li>
+        <li><a href="#偏差的加权平均值-rttd">偏差的加权平均值 RTTd</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题-4">习题</a></li>
+  </ul>
+</nav>
+                </aside>
+                <hr />
+            
+
+            <div class="post-content">
+                <h1 id="1-计算机网络概述">1 计算机网络概述</h1>
+<h2 id="计算机网络概念">计算机网络概念</h2>
+<h3 id="定义">定义</h3>
+<p>将具有<strong>独立功能</strong>的<strong>多台计算机</strong>通过<strong>通信线路连接</strong>，实现<strong>资源共享</strong>和信息传递的计算机系统</p>
+<h3 id="组成">组成</h3>
+<ul>
+<li>终端系统/资源子网: 提供共享的软件资源和硬件资源(如视频，音频)</li>
+<li>通信子网: 提供信息交换的网络节点和通信线路(按网线理解)</li>
+</ul>
+<h3 id="网络类型">网络类型</h3>
+<h4 id="按拓扑结构">按拓扑结构</h4>
+<ul>
+<li>星型</li>
+<li>树型</li>
+<li>总线型</li>
+<li>环型</li>
+<li>网状型</li>
+</ul>
+<p><img alt="拓扑" src="/images/cm_topology.png"></p>
+<h4 id="按范围分类">按范围分类</h4>
+<ul>
+<li>局域网 LAN
+<ul>
+<li>小区，家中</li>
+</ul>
+</li>
+<li>城域网 MAN
+<ul>
+<li>城市</li>
+</ul>
+</li>
+<li>广域网 WAN
+<ul>
+<li>国家，省之间</li>
+</ul>
+</li>
+<li>个人区域网 PAN
+<ul>
+<li>服务于个人</li>
+</ul>
+</li>
+</ul>
+<h4 id="按照传输方式">按照传输方式</h4>
+<ul>
+<li>有线
+<ul>
+<li>IEEE802.3</li>
+<li>IEEE802.11</li>
+</ul>
+</li>
+<li>无线
+<ul>
+<li>无线局域网WLAN</li>
+<li>无线个域网WPAN</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机网络体系结构">计算机网络体系结构</h2>
+<h3 id="传输方式">传输方式</h3>
+<h4 id="传输方式-1">传输方式</h4>
+<ol>
+<li>按传输方向分
+<ul>
+<li>单工: 只能单方向传输</li>
+<li>双工: 在同一时间，先路上只允许一个方向的数据通过</li>
+<li>全双工: 双方能够同时进行数据通信</li>
+</ul>
+</li>
+<li>按传输对象分
+<ul>
+<li>单播: 1对1</li>
+<li>多播: 1对多</li>
+<li>广播: 1对all</li>
+</ul>
+</li>
+</ol>
+<h4 id="数据交换">数据交换</h4>
+<ol>
+<li>电路交换
+<ul>
+<li>整个报文从头到尾连续传输，占用整条线路</li>
+</ul>
+</li>
+<li>报文交换
+<ul>
+<li>不会占用整个信道，整个报文先传送到相邻节点，全部存储下来查找换发表，再转发到下一个结点</li>
+</ul>
+</li>
+<li>分组交换
+<ul>
+<li>将数据包分组，之后传送到相邻结点，再查找转发表转发(分组传输)</li>
+</ul>
+</li>
+</ol>
+<h4 id="通信协议和体系结构">通信协议和体系结构</h4>
+<h5 id="网络协议三要素">网络协议三要素</h5>
+<ul>
+<li>语义
+<ul>
+<li>控制信息每个部分的意义，规定了需要发出何种控制信息，以及完成的动作与做出什么样的响应。</li>
+</ul>
+</li>
+<li>语法
+<ul>
+<li>用来规定信息格式，数据及控制信息的格式、编码及信号电平等</li>
+</ul>
+</li>
+<li>时序
+<ul>
+<li>时序是对事件发生顺序的详细说明(也可称为“同步”)</li>
+</ul>
+</li>
+</ul>
+<p>语义表示要做什么，语法表示要怎么做，时序表示做的顺序。</p>
+<h5 id="osi参考模型">OSI参考模型</h5>
+<ol>
+<li>应用层
+<ul>
+<li>提供网络服务和应用程序接口（如HTTP、FTP、SMTP）</li>
+</ul>
+</li>
+<li>表示层
+<ul>
+<li>处理数据格式和加密（如数据压缩、加密）</li>
+</ul>
+</li>
+<li>会话层
+<ul>
+<li>管理会话和连接（如建立、维护、终止会话）</li>
+</ul>
+</li>
+<li>传输层
+<ul>
+<li>提供端到端的通信和数据完整性（如TCP、UDP）</li>
+</ul>
+</li>
+<li>网络层
+<ul>
+<li>单位 分组，负责数据包的路由选择和转发（如IP地址、路由器）</li>
+</ul>
+</li>
+<li>数据链路层
+<ul>
+<li>单位 帧，负责节点之间的数据传输和错误检测（如MAC地址、以太网）</li>
+</ul>
+</li>
+<li>物理层
+<ul>
+<li>单位bit，处理物理传输介质（如电缆、光纤）和信号传输</li>
+</ul>
+</li>
+</ol>
+<h5 id="tcpip参考模型">TCP/IP参考模型</h5>
+<ol>
+<li>应用层
+<ul>
+<li>应用层</li>
+<li>表示层</li>
+<li>会话层</li>
+</ul>
+</li>
+<li>传输层</li>
+<li>网际层
+<ul>
+<li>网络层</li>
+</ul>
+</li>
+<li>网络接口层
+<ul>
+<li>数据链路层</li>
+<li>物理层</li>
+</ul>
+</li>
+</ol>
+<h2 id="习题">习题</h2>
+<ol>
+<li>
+<p><strong>试从多个方面比较电路交换、报文交换和分组交换的主要优缺点</strong></p>
+<ul>
+<li>电路交换
+<ul>
+<li>特点
+<ul>
+<li>通信有三阶段：建立链接、通信、释放连接，<strong>通信过程始终占用物理信道</strong></li>
+</ul>
+</li>
+<li>优点
+<ul>
+<li>静态分配传输带宽，建立连接后通信双方所需传输带宽不会再变</li>
+<li>双方通信不收其他用户影响，占用通信资源时间不受限制</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>通信线路利用率较低</li>
+<li>整个链接中只要有一条链路或交换机出现故障就会引发通信中断</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分组交换
+<ul>
+<li>特点
+<ul>
+<li>以<strong>报文分组</strong>作为传输单位，采用<strong>存储转发</strong>技术</li>
+</ul>
+</li>
+<li>优点
+<ul>
+<li>无连接建立释放截断，传送数据迅速</li>
+<li>动态分配带宽，合理运用各链路传输带宽</li>
+<li>采用分布式路由选择协议，某个节点或链路出现故障分组传送路由可以动态改变，继续传输数据</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>路由器存储转发需排队，造成时延</li>
+<li>动态分配传输带宽，各段链路带宽不同，当网络某处通信量突然增大，可能在网络中某处产生拥塞，延长数据传输时间</li>
+<li>分组必须携带控制信息，产生额外开销，且需要专门的管理和控制机制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>报文交换
+<ul>
+<li>特点
+<ul>
+<li>以<strong>整个报文</strong>为传输单位，采用<strong>存储转发</strong>技术</li>
+</ul>
+</li>
+<li>优点
+<ul>
+<li>省去分组与重装报文的过程</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>灵活性不如分组交换，且时延较大</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>计算机网络有哪些常用的性能指标？</strong></p>
+<ul>
+<li>速率
+<ul>
+<li>数据的传送速率</li>
+</ul>
+</li>
+<li>带宽
+<ul>
+<li>单位时间内从网络中一点到另一点能通过的最高数据率</li>
+</ul>
+</li>
+<li>吞吐量
+<ul>
+<li>单位时间内通过某个网络的数据量</li>
+</ul>
+</li>
+<li>时延
+<ul>
+<li>数据从网络一端到另一端的时间</li>
+</ul>
+</li>
+<li>时延带宽积
+<ul>
+<li>传播时延和带宽的乘积</li>
+</ul>
+</li>
+<li>往返时间RTT
+<ul>
+<li>发送数据到接受确认的时间</li>
+</ul>
+</li>
+<li>利用率
+<ul>
+<li>信道利用率: 信道有百分之几的时间被利用</li>
+<li>网络利用率: 全网络信道利用率的加权平均值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>假设信号在媒体上的传播速度为2.3×10^8m/s.媒体长度L分别为：</strong></p>
+<ol>
+<li><strong>10cm（网络接口卡）</strong></li>
+<li><strong>100m（局域网）</strong></li>
+<li><strong>100km（城域网）</strong></li>
+<li><strong>5000km（广域网）</strong></li>
+</ol>
+<p><strong>试计算出当数据率为1Mb/s和10Gb/s时在以上媒体中正在传播的比特数。</strong></p>
+<p>媒体长度为信道中数据的长度，计算传播时延(根据数据长度和传播速度计算已经传播了多长时间)，和数据率相乘得到正在传播的比特数</p>
+<p>解:</p>
+<ol>
+<li>
+<p>传播时延: $0.1\div(2.3×10^8)=4.35 \times 10^{-10}$ bits</p>
+<p>1Mb/s: $4.35 \times 10^{-10} \times 10^6=4.35 \times 10^{-4}$ bits</p>
+<p>1Gb/s: $4.35 \times 10 * 10^{-10} \times 10^9=4.35$ bits</p>
+</li>
+<li>
+<p>传播时延: 传播时延: $100\div(2.3×10^8)=4.35 \times 10^{-7}$ bits</p>
+<p>1Mb/s: $4.35 \times 10^{-7} \times 10^6=0.435$ bits</p>
+<p>1Gb/s: $4.35 \times 10 * 10^{-7} \times 10^9=4.35 \times 10^3$ bits</p>
+</li>
+<li>
+<p>传播时延: 传播时延: $(10 ^ 5)\div(2.3×10^8)=4.35 \times 10^{-4}$ bits</p>
+<p>1Mb/s: $4.35 \times 10^{-4} \times 10^6=435$ bits</p>
+<p>1Gb/s: $4.35 \times 10 * 10^{-4} \times 10^9=4.35 \times 10^6$ bits</p>
+</li>
+<li>
+<p>计算方法与上面相同</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>论述具有五层协议的网络体系结构的要点，包括各层的主要功能。</strong></p>
+<p>综合OSI和TCP/IP</p>
+<ul>
+<li>应用层: 直接性为用户的应用进程提供服务</li>
+<li>运输层: 向两台主机中进程之间的通信提供通用的数据传输服务，主要使用传输控制协议(TCP)或用户数据报协议(UDP)</li>
+<li>网络层: 把运输层的报文段或用户数据报封装成分组或包，通过路由器选择和转发</li>
+<li>数据链路层: 把网络层的IP数据包组装成帧，在两个相邻节点间的链路上传输</li>
+<li>物理层: 传输比特流</li>
+</ul>
+</li>
+<li>
+<p><strong>假定要在网络上传送1.5MB的文件。设分组长度为1KB，往返时间RTT=80ms。传送数据之前还需要有建立TCP连接的时间，这时间时2*RTT=160ms。试计算在以下几种情况下接收方收完该文件的最后一个比特需要的时间。</strong></p>
+<ol>
+<li>
+<p><strong>数据发送速率为10Mbit/s，数据分组可以连续发送。</strong></p>
+</li>
+<li>
+<p><strong>数据发送速率为10Mbit/s，但每发送完一个分组后要等待一个RTT时间才能在发送下一个分组。</strong></p>
+</li>
+<li>
+<p><strong>数据发送速率极快，可以不考虑发送数据所需要的时间。但规定在每一个RTT往返时间内只能发送20个分组。</strong></p>
+</li>
+<li>
+<p><strong>数据发送速率极快，可以不考虑发送数据所需要的时间。但在第一个RTT往返时间内只能发送一个分组，在第二个RTT内可以发送两个分组，在第三个RTT内可以发送四个分组。</strong>
+解:</p>
+<ul>
+<li>1MB = 2^10 KB = 2^20 B = 2^23 bits</li>
+<li>1Mbit = 10^3Kbits = 10^6bits</li>
+<li>RTT为往返时间，同时包含发送时间和返回时间</li>
+<li>数据包从发送到接收消耗的时间为0.5*RTT(发送到接收，不包含返程)，最后一个数据包也是同样</li>
+<li>除了将数据完全发送出去的时间外，还要计算最后数据包从发送方到接收方消耗的时间</li>
+</ul>
+<ol>
+<li>t = 2*RTT(建立TCP链接) + (1.5* 2^23)/(10 * 10^6) + 0.04s = 0.16s + 1.258s = 1.458s</li>
+<li>1.5MB = 1.5*(2^10)KB = 1536 KB = 1536 组
+<ul>
+<li>建立时间: 2RTT = 0.16s</li>
+<li>总发送时间(不算其他的RTT)仍然是1.258s</li>
+<li>最后一个数据包到达目的地需要0.5RTT = 0.04s</li>
+<li>其他的RTT: (1536 - 1) * 0.16 = 122.8s</li>
+<li>总时间: 0.16 + 1.258 + 0.04 + 122.8 = 124.258s</li>
+</ul>
+</li>
+<li>1536 // 20 = 76
+<ul>
+<li>1536 % 20 = 16</li>
+<li>一个RTT时间发送20个分组，意思是一个RTT只能发送20个分组，如果一次性没超过就不需要等待</li>
+<li>并且不考虑发送数据所需时间，但是仍需要计算最后一个分组到终点所需时间</li>
+<li>t = 2RTT + 76RTT + 0.5RTT = 6.12 + 0.16 = 6.28s</li>
+</ul>
+</li>
+<li>第一个RTT发送1个，第二个RTT发送2个，第三个RTT发送4个，第n个分组发送2^(n - 1)个分组
+<ul>
+<li>一共发送n = 1 * (1 - 2^(n - 1)) / (1 - 2) = 2^(n - 1) - 1组</li>
+<li>2^(n - 1) - 1 &gt;= 1536 =&gt; n &gt;= 11，所以最少11个RTT，最后一个RTT不足20组不需要等</li>
+<li>总共需要时间 t = (2 + 10 + 0.5)RTT = 1s</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="2-物理层">2 物理层</h1>
+<h3 id="2221-常用编码方式">2.2.2.1 常用编码方式</h3>
+<p><img alt="编码方式" src="/images/encode.png"></p>
+<ol>
+<li>不归零制: 正电平1，负电平0</li>
+<li>归零制: 正脉冲代表0, 负脉冲代表 1</li>
+<li>曼彻斯特编码: 位周期中心的向上跳变代表0, 位周期中心的向下跳变代表1。但也可反过来定义。</li>
+<li>差分曼彻斯特编码: 每一位中心始终有跳变，位开始边界有跳变代表0,而位开始边界没有跳变代表1</li>
+</ol>
+<h3 id="信道的极限容量">信道的极限容量</h3>
+<h4 id="信噪比">信噪比</h4>
+<p>$S$ 代表信号平均功率，$N$ 代表噪声平均功率</p>
+<p>信噪比(dB) $=10 \log_{10}(S/N)$ dB</p>
+<p>香农公式(信道的极限信息传输速率)，$W$ 代表信道带宽</p>
+<p>$$C = W \log_{2}(1+S/N)$$</p>
+<p>最高码元速率 $R$ ，码元振幅等级 $n$
+$$C=Rlog_{2}(n)$$</p>
+<h2 id="信道复用技术">信道复用技术</h2>
+<h3 id="频分">频分</h3>
+<h3 id="时分">时分</h3>
+<h3 id="码分">码分</h3>
+<h3 id="波分">波分</h3>
+<h2 id="习题-1">习题</h2>
+<ol>
+<li>
+<p><strong>假定某信道受奈氏准则限制的最高码元速率为20000码元／秒。如果采用振幅调制，把码元的振幅划分为16个不同等级来传送，那么可以获得多高的数据率( bit / s )?</strong></p>
+<p>$$C = 20000 \times log_{2}(16) = 80000 bit/s $$</p>
+</li>
+<li>
+<p><strong>为什么要使用信道复用技术？常用的信道复用技术有哪些？</strong></p>
+<ul>
+<li>为了通过共享信道,最大限度提高信道利用率。</li>
+<li>频分、时分、码分、波分。</li>
+</ul>
+</li>
+<li>
+<p><strong>试写出下列英文缩写的全文，并做简单的解释。FDM，FDMA,TDM,STDM,WDM,DWDM,CDMA,SONET,SDH,STM-1 ,OC-48.</strong></p>
+<ul>
+<li>FDM: Frequency Division Multiplexing 频分复用</li>
+<li>FDMA: Frequency Division Multiple Access 频分多址接入</li>
+<li>TDM: Time Division Multiplexing 时分复用</li>
+<li>STDM: Statistic Time Division Multiplexing 统计时分复用</li>
+<li>WDM: Wavelength Division Multiplexing 波分复用</li>
+<li>DWDM: Dense Wave Division Multiplexing 密集波分复用</li>
+<li>CDMA: Code Wave Division Multiplexing 码分复用</li>
+<li>SONET: Synchronous Optical Network 同步光纤网</li>
+<li>SDH: Synchronous Digital Hierarchy 同步数字系列</li>
+<li>STM-1: Synchronous Trasfer Module 第一级同步传递模块</li>
+<li>OC-48: Optical Carrier 第48级光载波</li>
+</ul>
+</li>
+<li>
+<p><strong>共有4个站进行码分多址通信。4个站的码片序列为 A：（－1－1－1＋1＋1－1＋1＋1） B：（－1－1＋1－1＋1＋1＋1－1） C：（－1＋1－1＋1＋1＋1－1－1） D：（－1＋1－1－1－1－1＋1－1） 现收到这样的码片序列S：（－1＋1－3＋1－1－3＋1＋1）。问哪个站发送数据了？发送数据的站发送的是0还是1？</strong></p>
+<ul>
+<li>A站: $S \cdot A = (1 - 1 + 3 + 1 - 1 + 3 + 1 + 1)/8 = 1$, 发送1</li>
+<li>B站: $S \cdot B = (1 - 3 - 3 - 1 - 1 - 3 + 1 - 1)/8 = -1$, 发送-1</li>
+<li>C站: $S \cdot C = (1 + 1 + 3 - 1 + 1 + 3 + 1 - 1)/8 = 0$, 无发送</li>
+<li>D站: $S \cdot D = (1 + 1 + 3 - 1 + 1 + 3 + 1 - 1)/8 = 1$, 发送1</li>
+</ul>
+</li>
+</ol>
+<h1 id="3-数据链路层">3 数据链路层</h1>
+<h3 id="差错检测">差错检测</h3>
+<h4 id="循环冗余检测crc">循环冗余检测(CRC)</h4>
+<ol>
+<li>发送端将数据划分成组，每组k个比特</li>
+<li>在每组数据后添加供差错检测的的n位<strong>冗余码</strong>，构成一个帧发送出去，一共发送(k+n)位</li>
+<li>接收端将收到的数据以帧为单位进行CRC校验</li>
+</ol>
+<p>CRC多项式: $P(X) = X^4+X+1$ 即除数 10011</p>
+<h4 id="帧检验序列fcs">帧检验序列(FCS)</h4>
+<p>与CRC不是同一个概念，CRC是<strong>检错方法</strong>，FCS是添加的<strong>冗余码</strong></p>
+<p>发送端:</p>
+<ol>
+<li>二进制模2运算(<strong>异或</strong>)进行2^n乘M的运算，相当于在M后添加n个0</li>
+<li>将得到的数除以双方事先约定的长度为(n+1)位的除数P，得到余数R(n位，比P少一位)</li>
+<li>余数R作为冗余码拼接在M后面发送出去</li>
+</ol>
+<p>接收端:</p>
+<ol>
+<li>把收到的每一个帧除以除数P(模2运算)，然后检查得到的余数R</li>
+<li>如果传输无差错，R一定是0</li>
+</ol>
+<h3 id="csmacd协议多点接入载波监听冲突检测">CSMA/CD协议(多点接入载波监听/冲突检测)</h3>
+<blockquote>
+<p>电磁波在<strong>1km</strong>电缆传播时延约为<strong>5 μs</strong></p>
+</blockquote>
+<p>多点接入说明是总线型网络，计算机以多点接入的方式连接在一根总线上，协议的实质是&quot;<strong>载波监听</strong>&ldquo;和&rdquo;<strong>碰撞检测</strong>&quot;。</p>
+<ul>
+<li>载波监听: 检测信道，确定<strong>有没有其他计算机也在发送</strong>，为了获得发送权</li>
+<li>碰撞检测: 发送中检测信道，及时发现其他站和本站发送的碰撞。边发送数据边检测信道上的信号电压变化情况，判断自己发送数据时其他站是否也在发送(检测信道电压是否超过限值)</li>
+</ul>
+<p><img alt="载波监听" src="/images/csma.png"></p>
+<ul>
+<li>从图中可以看出，每个站在自己发送数据之后的一小段时间内，存在着遭遇碰撞的可能性。（这个时间是2t，t由两站之间的距离决定）这是以太网发送的不确定性。正是这种不确定性使得以太网的平均通信量远小于以太网的最高数据率。</li>
+<li>以太网端到端的往返时间2t称为<strong>争用期</strong>（碰撞窗口）</li>
+</ul>
+<h4 id="最短帧长">最短帧长</h4>
+<p>为了实现CSMA/CD,需要限定帧的长度。这是因为一旦整个帧被被发送了，站点就<strong>无法保留帧的副本</strong>并<strong>无法掌控线路中的冲突检测</strong>。因此，帧的传输时间tr必须至少是最长传播时间t的2倍。</p>
+<h4 id="截断二进制指数退避">截断二进制指数退避</h4>
+<ul>
+<li>发生碰撞的站停止发送数据后，不是等待信道空闲后再立即发送数据，而<strong>是退避一个随机的时间</strong>以减小再次发生碰撞的概率</li>
+<li>因为有<strong>载波监听</strong>，所以再次发送前能检测到信道忙，不会马上发送数据</li>
+</ul>
+<ol>
+<li>
+<p>协议规定基本退避时间为2t，2t通常取51.2μs</p>
+</li>
+<li>
+<p>从离散的整数集合 ${0, 1, \ldots, 2^k-1}$ 中随机取一个数，记为r，重传应推后时间是r倍的争用期</p>
+<p>$$
+k=Min[重传次数, 10]
+$$</p>
+<p>重传次数≤10时，参数k等于重传次数；当重传次数&gt;10时，k=10</p>
+</li>
+<li>
+<p>重传次数≥16，丢弃帧并向高层报告</p>
+</li>
+</ol>
+<h3 id="以太网交换机自学习功能">以太网交换机自学习功能</h3>
+<p><a href="https://www.cnblogs.com/YXBLOGXYY/p/15401671.html">外部链接</a></p>
+<p>交换机接收到帧，之后在交换表查找帧目的MAC地址对应接口，分存在和不存在两种情况</p>
+<ul>
+<li>交换表存在
+直接转发到对应接口</li>
+<li>不存在
+<ul>
+<li>向所有接口广播该地址，正确接口的设备会响应，其他会丢弃，之后将接口写入到交换表中。交换表还会记录时间，保证自动删除</li>
+<li>要保证一台主机到其他主机的路径是<strong>无环路树状结构</strong>，避免兜圈子</li>
+</ul>
+</li>
+</ul>
+<h2 id="习题-2">习题</h2>
+<p><a href="https://blog.csdn.net/weixin_45773137/article/details/126276788">CSDN</a></p>
+<p>课本 04 07 14 20 24 29</p>
+<ol>
+<li>
+<p>数据链路层的三个基本问题(封装成帧、透明传输和差错检测)为什么都必须加以解决？</p>
+<p>封装成帧: 数据前后加上帧头尾，接收端数据链路层收到物理层传来的比特流才能<strong>根据帧头尾识别成一个帧</strong></p>
+<p>透明传输: 防止数据中出现与帧定界符相同的比特组合导致出现帧定界错误，在<strong>发送端数据中帧定界符前加上转义符，接收端去掉</strong>，使数据无差错地通过数据链路层，实现透明传输</p>
+<p>差错检验: 使<strong>错误数据到达节点或主机的数据链路层就能被尽快检测到</strong>，而不是到达主机后，主机的高层软件进行检测，使错误数据尽少的占用通信资源，节约网络资源</p>
+</li>
+<li>
+<p>要发送的数据为1101011011。采用CRC的生成多项式是 $P(X) = X^4+X+1$ 试求应添加在数据后面的余数。
+$P(X) = X^4+X+1$ = 10011，除数为10011</p>
+<ul>
+<li>
+<p>数据在传输过程中最后一个1变成了0，问接收端能否发现？</p>
+<p>能，添加冗余码后数据不为0</p>
+</li>
+<li>
+<p>若数据在传输过程中最后两个1都变成了0，问接收端能否发现？</p>
+<p>能，添加冗余码后数据不为0</p>
+</li>
+<li>
+<p>采用CRC检验后，数据链路层的传输是否就变成了可靠的传输？</p>
+<p>不是，数据链路层只能保证无差错接收</p>
+</li>
+</ul>
+</li>
+<li>
+<p>常用的局域网的网络拓扑有哪些种类？现在最流行的是哪种结构？为什么早期的以太网选择总线拓扑结构而不是星形拓扑结构，但现在却改为使用星形拓扑结构？</p>
+<ul>
+<li>现在最流行的是星形网。常用的有星形网、环形网和总线网。</li>
+<li>当时人们都认为有源器件容易出故障，不容易出故障的又太贵；无源的总线结构更加可靠，但实践证明，连接有大量站点的总线式以太网很容易出现故障，而现在专用的ASIC芯片的使用可以讲星形结构的集线器做的非常可靠，因此现在的以太网一般都使用星形结构的拓扑。</li>
+</ul>
+</li>
+<li>
+<p>假定1km长的CSMA/CD网络的数据率为1Gb/s。设信号在网络上的传播速率为200000km/s。求能够使用此协议的最短帧长。</p>
+<ul>
+<li>单程传播时间 t = 1km/200000km = 5μs，来回10μs，所以最小帧的发射时间不能小于10微秒</li>
+<li>按照题目，10μs可以发送10000bit(计算)，所以最短帧10000位或1250字节</li>
+</ul>
+</li>
+<li>
+<p>假定站点A和B在同一个10Mb/s以太网网段上。这两个站点之间的传播时延为225比特时间。现假定A开始发送一帧，并且在A发送结束之前B也发送一帧。如果A发送的是<strong>以太网所容许</strong>的最短的帧，那么A在检测到和B发生碰撞之前能否把自己的数据发送完毕？换言之，如果A在发送完毕之前并没有检测到碰撞，那么能否肯定A所发送的帧不会和B发送的帧发生碰撞？（提示：在计算时应当考虑到每一个以太网帧在发送到信道上时，在MAC帧前面还要增加若干字节的前同步码和帧定界符）</p>
+<ul>
+<li>10Mb/s以太网网段最短帧长512bit(按照<a href="/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/#截断二进制指数退避">通常取的数值</a>)，加上首尾供576bit(8字节)</li>
+<li>发送结束前B也发送一帧，那么B只能在A发送后225bit内发送，因为传播时延为225比特时间，超出后因为<strong>载波监听</strong>会无法发送(0~224bit内发送)</li>
+<li>假设B在224bit时刻发送，那么A在224+225 = 449bit时检测到，所以不会发送完毕</li>
+<li>一样由于载波监听，B只能在前224bit发送，不会发生碰撞，就算按224bit发送，到达时是449bit，此时检测到碰撞了，不符合题意，反证可以肯定A所发送的帧不会和B发送的帧发生碰撞</li>
+</ul>
+</li>
+<li>
+<p>以太网交换机有何特点？用它怎样组成虚拟局域网？</p>
+<ul>
+<li>接口数量多；</li>
+<li>端口与主机或交换机相连，全双工工作；</li>
+<li>具有并行性，联通一台交换机上的端口，多对主机同时工作；</li>
+<li>相互通信的主机都独占传输媒体，无碰撞地传输数据；</li>
+<li>端口具有存储器，端口繁忙时可缓存。</li>
+<li>即插即用，自学习建立交换表。</li>
+<li>转发速率高，采用专用的结构芯片，硬件转发。</li>
+</ul>
+<p>由以太网交换机连接的局域网段构成与物理位置无关的逻辑组，同一个VLAN发送的帧中都有明确的标识符表示这个帧属于哪个VLAN</p>
+</li>
+</ol>
+<h1 id="4-网络层">4 网络层</h1>
+<p>IP地址用于<strong>确定唯一设备</strong>，网络地址用于标识一个<strong>网络段</strong></p>
+<h2 id="422-ip地址">4.2.2 IP地址</h2>
+<h3 id="无分类编址-cidr">无分类编址 CIDR</h3>
+<p>全名<strong>无分类域间路由选择</strong></p>
+<h4 id="网络前缀">网络前缀</h4>
+<p><strong>IP地址 ::= {&lt;网络前缀&gt;,&lt;主机号&gt;}</strong></p>
+<ul>
+<li>网络前缀也可以是ip地址中的<strong>网络号</strong></li>
+<li>主机号也可称为后缀</li>
+</ul>
+<p>CIDR采用<strong>斜线记法</strong>(也叫<strong>CIDR记法</strong>)，例如128.14.35.7/20，前20位是网络前缀</p>
+<h4 id="地址块">地址块</h4>
+<p>由<strong>网络前缀都相同</strong>的所有连续的 IP 地址组成</p>
+<ul>
+<li>128.14.32.7是IP地址，但<strong>未指明网络前缀长度</strong>，因此不知道<strong>网络地址</strong>是什么。</li>
+<li>128.14.32.7/20也是 IP 地址，但同时指明了网络前缀为 20 位，由此可导出<strong>网络地址</strong>。</li>
+<li>128.14.32.0/20 是包含多个IP地址的地址块或网络前缀，或更简单些，就称为前缀，同时也是这个地址块中主机号为全0的地址。上面地址块中 4 段十进制数字最后的0有时可以省略，即简写为 128.14.32/20</li>
+</ul>
+<h4 id="地址掩码">地址掩码</h4>
+<blockquote>
+<p>网络地址和地址掩码不要搞混</p>
+</blockquote>
+<p>用于从IP地址迅速计算出网络地址，32位</p>
+<ul>
+<li>
+<p>地址<strong>掩码</strong>由一连串的1和接着的一连串0组成，1的长度是网络前缀长度，又称为<strong>子网掩码</strong>。在 CIDR 记法中，<strong>斜线后面的数字就是地址掩码中1的个数</strong></p>
+<ul>
+<li>A类网络 <strong>255</strong>.0.0.0或<strong>255</strong>.0.0.0/8</li>
+<li>B类网络 <strong>255.255</strong>.0.0或<strong>255.255</strong>.0.0/16</li>
+<li>C类网络 <strong>255.255.255</strong>.0或<strong>255.255.255</strong>.0/24</li>
+</ul>
+</li>
+<li>
+<p>将二进制IP地址和地址掩码按位AND运算即可得到网络地址</p>
+</li>
+<li>
+<p>一个大的CIDR地址块包含很多个小地址块，路由器转发表利用大的一个CIDR地址块来代替许多较小的地址块。这种方法称为<strong>路由聚合</strong></p>
+<ul>
+<li>网络前缀越短的地址块所包含的地址数就越多。</li>
+</ul>
+</li>
+</ul>
+<p><img alt="CIDR举例" src="/images/cidr.png"></p>
+<h2 id="424-地址解析协议-arp">4.2.4 地址解析协议 ARP</h2>
+<p>P133</p>
+<p>用于将机器IP转换为MAC地址</p>
+<ul>
+<li>每个主机都设有一个<strong>ARP高速缓存</strong>，存放<strong>本局域网上</strong>各主机IP到MAC地址的映射表</li>
+<li>主机A向主机B发送IP数据报时，先在ARP缓存查看有无主机B的IP地址，如果有就直接取出MAC地址写入MAC帧，通过局域网发送</li>
+<li>如果查不到，可能是主机A刚加电也可能是B刚入网，按以下步骤找到主机B的MAC地址
+<ol>
+<li>ARP进程在本局域网上广播一个ARP 请求分组，ARP 请求分组的主要内容是：“我的 IP 地址是209.0.0.5, MAC 地址是XXX 。我想知道IP地址为209.0.0.6的主机的MAC地址。”</li>
+<li>局域网上的所有主机上运行的 ARP 进程都收到此 ARP 请求分组，主机B的IP 地址与 ARP 请求分组中要查询的IP地址一致，就收下这个ARP请求分组，并向主机A发送ARP响应分组(自己的IP和MAC)，同时在这个 ARP 响应分组中写入自己的 MAC 地址。由于其他主机IP地址不一致，所以不做响应</li>
+<li>主机A收到主机B的ARP响应分组后，写入。</li>
+</ol>
+</li>
+<li>ARP对保存在高速缓存中的每一个映射地址项目都设置<strong>生存时间</strong>，凡超过生存时间的项目就从高速缓存中删除掉</li>
+</ul>
+<h2 id="425-ip数据报格式">4.2.5 IP数据报格式</h2>
+<p><img alt="ip数据报" src="/images/ip_packet.png"></p>
+<h3 id="首部各字段">首部各字段</h3>
+<ol>
+<li>
+<p>版本: 占4位，4(IPv4)/6(IPv6)</p>
+</li>
+<li>
+<p>首部长度: 4位，长度字段所表示数的单位是32位字长(4字节)，IP首部固定部分20字节，因为这个值最小是5，最大15(1111)</p>
+<ul>
+<li>1 = 4字节， 2 = 8字节</li>
+</ul>
+</li>
+<li>
+<p>区分服务: 8位</p>
+</li>
+<li>
+<p>总长度: 16位，首部和数据之和的长度</p>
+<ul>
+<li>数据字段的最大长度，称为最大传送单元(MTU)，IP数据报封装成链路层帧时<strong>不能超过</strong>下面数据链路层所规定的MTU</li>
+<li>分片时，数据包首部总长度是指<strong>分片后每一个分片</strong>首部长度该分片的数据长度的总和。</li>
+</ul>
+</li>
+<li>
+<p>标识: 16位，IP软件在存储器中维持一个计数器，每产生一个数据报，计数器就加1, 并将此值赋给标识段。但这个“标识”并不是序号，因为IP是无连接服务，数据报不存在按序接收的问题。分片数据报标识字段相同</p>
+</li>
+<li>
+<p>标志: 3位，只有前两位有意议</p>
+<ul>
+<li>最低位记为MF。MF=1即表示后面还有分片。MF=O表示这是最后一个。</li>
+<li>中间的一位记为DF，意思是不分片(DF=1)</li>
+</ul>
+</li>
+<li>
+<p>片偏移: 13位，指出分片后在原分组的相对起始位置。片偏移以8个字节为偏移单位，除最后一个数据报片外，其他每个分片的长度一定是8字节(64位)的整数倍。</p>
+</li>
+<li>
+<p>生存时间(TTL, time to live): 数据包在网络中的<strong>寿命</strong>，之前是按秒数现在按跳数(转发次数)，最大255</p>
+</li>
+<li>
+<p>协议: 8位，指出此数据报携带的数据使用何种协议</p>
+<p><img alt="协议" src="/images/protocol.png"></p>
+</li>
+<li>
+<p>首部检验和: 16位，只检验<strong>首部</strong>不包括数据部分，每经过一个路由器都重新计算</p>
+<p><img alt="校验计算" src="/images/ip_crc.png"></p>
+</li>
+<li>
+<p>源地址: 32位</p>
+</li>
+<li>
+<p>目的地址: 32位</p>
+</li>
+</ol>
+<h2 id="431-基于终点的转发">4.3.1 基于终点的转发</h2>
+<p>转发过程(看书P141例4.2)</p>
+<ol>
+<li>主机将目的地址和本网络子网掩码按位AND确定是否在本网络上，如果在本网络就直接发送，都则就发送给路由器</li>
+<li>路由器在转发表中进行前缀匹配，匹配成功后调用ARP解析目的主机MAC地址，之后封装成链路层的帧，交付给连接的其他网络</li>
+</ol>
+<h2 id="45-ipv6">4.5 IPv6</h2>
+<h3 id="ipv6简写规则">IPv6简写规则</h3>
+<ol>
+<li>每组前面的0的可以省略不写
+<ul>
+<li>完整：2403:A200:A200:1100:0000:0000:0F00:0003</li>
+<li>简写：2403:A200:A200:1100:0000:0000:F00:3</li>
+</ul>
+</li>
+<li>连续为0的一组或多组，可以用::代替，注意<strong>一个IP中只能用一次::</strong>
+<ul>
+<li>完整：2403:A200:A200:1100:0000:0000:0F00:0003</li>
+<li>简写：2403:A200:A200:1100::F00:3</li>
+</ul>
+</li>
+<li>如果一组中全为0，又不想用 :: 代替，每组中要保留1个0
+<ul>
+<li>完整：2403:A200:A200:0000:AFFF:0000:0000:0003</li>
+<li>简写：2403:A200:A200:0:AFFF::3</li>
+</ul>
+</li>
+</ol>
+<h2 id="462-内部网关协议rip">4.6.2 内部网关协议(RIP)</h2>
+<h3 id="工作原理">工作原理</h3>
+<ul>
+<li>已知一个路由器都要维护从它自己到其他每一个目的网络的距离记录</li>
+<li>距离也称为<strong>跳数</strong>，每经过一个网络，跳数就加1，最大15，等于16表示不可达。</li>
+<li>只适合<strong>小型互联网</strong></li>
+<li>有以下特点
+<ol>
+<li>仅和相邻路由器交换信息</li>
+<li>路由器交换的信息是当前本路由器所知道的全部信息，即自己现在的路由表</li>
+<li>按固定的时间间隔交换路由信息</li>
+</ol>
+</li>
+</ul>
+<h3 id="距离向量算法">距离向量算法</h3>
+<ol>
+<li>将地址为X的相邻路由器发来的 RIP 报文，修改并合并
+<ul>
+<li>发来的报文中所有下一跳字段都改成X，之后所有的&quot;距离&quot;字段的值加1</li>
+<li>修改后没有的目的网络就添加到路由表，有的如果下一跳相同就直接替换，反之就比较哪个更小之后替换</li>
+</ul>
+</li>
+<li>若3分钟没收到相邻路由器更新路由表，则将此相邻路由器标记为不可达(16)</li>
+</ol>
+<p>优点</p>
+<ul>
+<li>实现简单，开销较小</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>好消息传播的快，坏消息传播的慢</li>
+</ul>
+<h2 id="习题-3">习题</h2>
+<ol>
+<li>
+<p>试说明IP地址与MAC地址的区别。为什么要使用这两种不同的地址？</p>
+<ul>
+<li>IP地址: 给每个连接在因特网上的主机/路由器分配一个全世界范围唯一的32位标识符，从而把整个因特网看成一个单一抽象的网络，给予逻辑域的划分且不受硬件限制</li>
+<li>MAC地址: 一定程度上与硬件一致，标识具体的链路通信对象，实际网络链路上传送数据帧时，最终还是必须用硬件地址</li>
+</ul>
+</li>
+<li>
+<p>主机A发送IP数据报给主机B，途中经过了5个路由器。试问在IP数据报的发送过程中总共使用了几次ARP？</p>
+<p>6次，主机用一次，路由器每个用一次</p>
+</li>
+<li>
+<p>设某路由器建立了如下路由表：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>下一跳</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.4.153.0/26</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>128.96.39.0/25</td>
+<td>m0</td>
+</tr>
+<tr>
+<td>128.96.39.128/25</td>
+<td>m1</td>
+</tr>
+<tr>
+<td>128.96.40.0/25</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>192.4.153.0/26</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>R4</td>
+</tr>
+</tbody>
+</table>
+<p>现共收到5个分组，其目的地址分别为：</p>
+<ol>
+<li>128.96.39.10</li>
+<li>128.96.40.12</li>
+<li>128.96.40.151</li>
+<li>192.4.153.17</li>
+<li>192.4.153.90</li>
+</ol>
+<p>试分别计算下一跳。</p>
+<p>解:</p>
+<ol>
+<li>与子网掩码255.255.255.128/25相与，得128.96.39.0，根据路由表对照，下一跳为m0</li>
+<li>&hellip; 128.96.0，下一跳为R2</li>
+<li>&hellip; 128.96.40.128，不符合前五条，进入默认记录，下一跳为R4</li>
+<li>&hellip; 192.4.153.0，下一跳R3</li>
+<li>&hellip; 192.4.153.64，下一跳R4</li>
+</ol>
+</li>
+<li>
+<p>一个数据报长度为4000字节（固定首部长度）。现在经过一个网络传送，但此网络能够传送的最大数据长度为1500字节。试问应当划分为几个短些的数据报片？各数据报片的数据字段长度、片偏移字段和MF标志应为何数值？</p>
+<ul>
+<li>固定首部长度为<strong>20字节</strong></li>
+<li>片偏移量<strong>8字节</strong>一个单位</li>
+<li>有效长度为 4000 - 20 = 3980字节，应当划分成3片
+<table>
+<thead>
+<tr>
+<th>总长度</th>
+<th>数据字段长度</th>
+<th>MF</th>
+<th>片偏移字段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1500</td>
+<td>1480</td>
+<td>1</td>
+<td>0 / 8 = 0</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>1480</td>
+<td>1</td>
+<td>1480 / 8 = 185</td>
+</tr>
+<tr>
+<td>1040</td>
+<td>1020</td>
+<td>0</td>
+<td>185 + 185 = 370</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>有如下的4个/24地址块，试进行最大可能的聚合。</p>
+<ul>
+<li>212.56.132.0/24</li>
+<li>212.56.133.0/24</li>
+<li>212.56.134.0/24</li>
+<li>212.56.135.0/24</li>
+</ul>
+<p>解:</p>
+<ul>
+<li>132=10000100</li>
+<li>133=10000101</li>
+<li>134=10000110</li>
+<li>135=10000111
+倒数第二个8位可能的最大聚合为10000100 = 132，所以最大可能聚合为212.56.132.0/22</li>
+</ul>
+</li>
+<li>
+<p>一个自治系统分配到的IP地址块为30.138.118/23，并包含有5个局域网，其连接图如图所示，每个局域网上的主机数分别标注。试给出每一个局域网的<strong>地址块</strong>。</p>
+<p><img alt="图" src="/images/q4-5.png"></p>
+<p>根据主机数量分配，但要保证主机地址不同，如果用同一个网段，加起来不能超过最大的数量</p>
+<p>118 = 01110110，取前7位为掩码，可用的地址还有01110111 = 119</p>
+<ol>
+<li>LAN1有三个路由器，需要三个以上的位置: 30.138.119.252/30</li>
+<li>LAN2: 30.138.119.128/25</li>
+<li>LAN3: 30.138.118.0/24</li>
+<li>LAN4: 30.138.118.252/30</li>
+<li>LAN5: 30.138.118.224/27</li>
+</ol>
+</li>
+<li>
+<p>以下地址块中的哪一个和86.32/12匹配?请说明理由。</p>
+<ol>
+<li>86.33.224.123</li>
+<li>86.79.65.216</li>
+<li>86.58.119.74</li>
+<li>86.68.206.153</li>
+</ol>
+<p>比较网络前缀，86.32/12 = &hellip; .0010</p>
+<ol>
+<li>86.33.224.123/12 = &hellip;.0010
+这里不再重复234，这样看只有1符合要求</li>
+</ol>
+</li>
+<li>
+<p>试简述RIP，OSPF和BGP路由选择协议的主要特点。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>RIP</th>
+<th>OSPF</th>
+<th>BGP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网关协议</td>
+<td>内部</td>
+<td>内部</td>
+<td>外部</td>
+</tr>
+<tr>
+<td>路由表内容</td>
+<td>目的网，下一站，距离</td>
+<td>目的网，下一站，距离</td>
+<td>目的网，完整路径</td>
+</tr>
+<tr>
+<td>最优路依据</td>
+<td>跳数</td>
+<td>费用(Dijsktra算法)</td>
+<td>多种策略</td>
+</tr>
+<tr>
+<td>算法</td>
+<td>距离矢量</td>
+<td>链路状态</td>
+<td>距离矢量</td>
+</tr>
+<tr>
+<td>传送方式</td>
+<td>运输层UDP</td>
+<td>IP数据包</td>
+<td>建立TCP链接</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>简单效率低，好消息传的快坏消息传得慢，最大15跳数</td>
+<td>效率高，路由器交换信息频繁，难维持一致性</td>
+<td>规模大，统一度量为可达性</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>假定网络中的路由器 B 的路由表有如下的项目:</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N1</td>
+<td>7</td>
+<td>A</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>8</td>
+<td>F</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>4</td>
+<td>E</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>4</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>现在 B 收到从 C 发来的路由信息</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>试求出路由器B更新后的路由表(详细说明每个步骤)</p>
+<ol>
+<li>修改得到的表，加一设定下一跳</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N2</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>9</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>10</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>6</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>之后对比并合并，加上不存在的，替换更小的</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+<th>变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N1</td>
+<td>7</td>
+<td>A</td>
+<td>无新信息</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>5</td>
+<td>C</td>
+<td>相同下一跳，替换</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>9</td>
+<td>C</td>
+<td>不存在，添加</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>5</td>
+<td>C</td>
+<td>不同下一跳且更短，更新</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>4</td>
+<td>E</td>
+<td>不同下一跳且距离更大，不变</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>4</td>
+<td>F</td>
+<td>不同下一跳且距离更大，不变</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>已知一/27网络中有一个地址是167.199.170.82，问这个网络的<strong>网络掩码</strong>，网络前缀长度和网络后缀长度是多少？</p>
+</li>
+</ol>
+<ul>
+<li>注意是求<strong>掩码</strong></li>
+<li>因为前缀长度27，因此有27个1和5个0，&hellip; = 255.255.255.224</li>
+<li>网络前缀长度为27，后缀长度为5</li>
+</ul>
+<ol start="11">
+<li>
+<p>某单位分配到一个地址块14.24.74.0/24。该单位需要用到三个子网，对这三个子地址块的具体要求是：子网N1需要120个地址，子网N2需要60个地址，子网N3需要10个地址。请给出地址块的分配方案。</p>
+<ul>
+<li>需要多少个地址就留<strong>2^n</strong>个地址数
+<ul>
+<li>120 &lt; 128 = 2^7，占用7位，因此前缀长度为32 - 7 = 25位</li>
+<li>60 &lt; 64 = 2^6，占用6位，前缀长度32 - 6 = 26位</li>
+<li>10 &lt; 16 = 2^4, 占4位，前缀长度32 - 4 = 28位</li>
+</ul>
+</li>
+<li>根据上面的结果得到分配方案
+<ul>
+<li>N1的地址块(/25) 首地址14.24.74.0，末地址14.24.74.127</li>
+<li>N2的地址块(/26) 首地址14.24.74.128，末地址14.24.74.191</li>
+<li>N3的地址块(/28) 首地址14.24.74.192，末地址14.24.74.207</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>已知一CIDR地址块为200.56.168.0/21。</p>
+<ol>
+<li>
+<p>试用二进制形式表示这个地址块。</p>
+<p>11001000.00111000.11001000.00000000</p>
+</li>
+<li>
+<p>这个CIDR地址块包括有多少个C类地址块？</p>
+<p>第三个字节取5位，还剩3位，因此有8(2^3)个</p>
+</li>
+</ol>
+</li>
+<li>
+<p>试把以下的IPv6地址用零压缩方法写成简洁形式:</p>
+<ol>
+<li>
+<p>0000:0000:F53:6382:AB00:67DB:BB27:7332</p>
+<p>::F53:6382:AB00:67DB:BB27:7332</p>
+</li>
+<li>
+<p>0000:0000:0000:0000:0000:0000:004D:ABCD</p>
+<p>::4D:ABCD</p>
+</li>
+<li>
+<p>0000:0000:0000:AF36:7328:0000:87AA:0398</p>
+<p>::AF36:7328:0:87AA:398</p>
+</li>
+<li>
+<p>2819:00AF:0000:0000:0000:0035:0CB2:B271</p>
+<p>2819:AF::35:CB2:B271</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="5-运输层">5 运输层</h1>
+<h2 id="562-超时重传时间的选择">5.6.2 超时重传时间的选择</h2>
+<h3 id="加权平均往返rtts">加权平均往返(RTTs)</h3>
+<p>新的 RTTs = (1 - α) x （旧的RTTs) + α x（新的RTT样本）</p>
+<p><strong>α一般取0.125</strong></p>
+<h3 id="超时重传时间-rto">超时重传时间 RTO</h3>
+<p>RTO = RTTs + 4 x RTTd</p>
+<h3 id="偏差的加权平均值-rttd">偏差的加权平均值 RTTd</h3>
+<p>新的 RTTd= (1 - β) x （旧的 RTTd) + β x |RTTs - 新的RTT 样本|</p>
+<p><strong>β一般取0.25</strong></p>
+<h2 id="习题-4">习题</h2>
+<ol>
+<li>
+<p>为什么说UDP是面向报文的，而TCP是面向字节流的？</p>
+<ul>
+<li>发送方UDP对应用程序交付的报文添加首部后就向下交付给IP层，对应用层交下来的报文既不合并也不拆分，保留报文边界。接收方UDP对IP层交付的数据包去除首部后原封不动地交给上层应用，一次交付一个完整报文</li>
+<li>发送方TCP对应用程序交付的报文数据块视为无结构字节流，但维持各字节</li>
+</ul>
+</li>
+<li>
+<p>一个UDP用户数据的数据字段为8192字节。在数据链路层要使用以太网来传送。试问应当划分为几个IP数据报片？说明每一个IP数据报字段长度和片偏移字段的值。</p>
+<ol>
+<li>
+<p>UDP数据报 = 首部8字节 + 数据部分，所以数据报总长度为8 + 8192 = 8200字节</p>
+</li>
+<li>
+<p>以太网最大传输单元MTU = 1500，除去IP数据报首部20字节，字段部分最大1480字节</p>
+</li>
+<li>
+<p>8200 / 1480 = 5 .. 800，因此前五个每个1480字节，第6个800字节，偏移字段以8字节为单位</p>
+<ul>
+<li>第一个IP数据报字段长度：1480，第一片偏移字段：1480 * 0 / 8 = 0</li>
+<li>第二个IP数据报字段长度：1480，第二片偏移字段：1480 * 1 / 8 = 185</li>
+<li>第三个IP数据报字段长度：1480，第三片偏移字段：1480 * 2 / 8 = 370</li>
+<li>第四个IP数据报字段长度：1480，第四片偏移字段：1480 * 3 / 8 = 555</li>
+<li>第五个IP数据报字段长度：1480，第五片偏移字段：1480 * 4 / 8 = 740</li>
+<li>第六个IP数据报字段长度：800， 第六片偏移字段：1480 * 5 / 8 = 925</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>主机 A 向主机 B 连续发送了两个 TCP 报文段，其序号分别为 70 和 100。试问：</p>
+<ol>
+<li>
+<p>第一个报文段携带了多少个字节的数据？</p>
+<p>携带的数据是70~99，共30字节</p>
+</li>
+<li>
+<p>主机 B 收到第一个报文段后发回的确认中的确认号应当是多少？</p>
+<p>B期望收到下一个报文段的第一个数据字节序号为100，所以确认号是100</p>
+</li>
+<li>
+<p>如果主机 B 收到第二个报文段后发回的确认中的确认号是 180，试问 A 发送的第二个报文段中的数据有多少字节？</p>
+<p>A 发送的第二个报文段中的数据中的字节数是 180 - 100 = 80 字节（实际上，就是序号 100 到序号 179 的字节，即 179 - 100 + 1 = 80 字节）</p>
+</li>
+<li>
+<p>如果 A 发送的第一个报文段丢失了，但第二个报文段到达了 B。B 在第二个报文段到达后向 A 发送确认。试问这个确认号应为多少？</p>
+<p>B 在第二个报文段到达后向 A 发送确认，其确认号应为 70。（报文段丢失，就会重复发送确认上一个未收到的报文段第一个序号，即 70）(<strong>快恢复</strong>)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>用TCP通过速率为1Gbit/s的链路传送一个10MB的文件。假定链路的往返时延RTT=50ms。TCP选用了窗口扩大选项，使窗口达到可选用的最大值。在接收端，TCP的接收窗口为1MB，而发送端采用拥塞控制算法，从慢开始传送。假定拥塞窗口以分组为单位计算，在一开始发送1个分组，而每个分组长度都是1KB.假定网络不会发生拥塞和分组丢失，并且发送端发送数据的速率足够快，因此发送时延可以忽略不计，而接收端每一次收完一批分组后就立即发送确认ACK分组。</p>
+<ol>
+<li>
+<p>经过多少个RTT后，发送窗口大小达到1MB？</p>
+<ul>
+<li>拥塞算法中，每一次收到一个新报文段确认，发送窗口都会加一，一开始只有一个分组且长度为1KB = 2^0KB，经过一个RTT翻倍(发送时延忽略不计)，2^1 = 2KB</li>
+<li>1MB = 1024KB，2^10 = 1MB，也就是经过10个RTT，发送窗口达到1MB</li>
+</ul>
+</li>
+<li>
+<p>发送端把整个10MB文件传送成功共需要多少个RTT？传送成功是指发送完整个文件，并收到所有的确认。TCP扩大的窗口够用么？</p>
+<p><img alt="窗口" src="/images/rtt.png"></p>
+<p>⚠️ <strong>传送完一次需要一个RTT，第一次也不忽略</strong></p>
+<ul>
+<li>第十个RTT结束后共传送了2^10 - 1个分组，比1MB少一个，可先不考虑，还需传送9MB</li>
+<li>第十一个RTT结束传送1MB，第12个传送2MB，第13个传送4MB，第十四个结束传送8MB，到此结束(1 + 1 + 2 + 4 + 8 &gt; 10)，因此需要14个RTT</li>
+</ul>
+</li>
+<li>
+<p>根据整个文件发送成功所花费的时间（包括收到所有的确认），计算此传输链路的有效吞吐率。链路带宽的利用率是多少？</p>
+<ul>
+<li>吞吐率 = 数据量/时间，数据量 = 10MB = 10 * (2 ^ 20) * 8 bit，时间 = 14 * 50ms = 0.7s，有效吞吐率 = &hellip;(根据前面的数据算) = 119.8Mbit/s</li>
+<li>带宽利用率 = 吞吐量/带宽，119.8Mbit / 1Gbit = 0.1198 = 11.98%</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>在 TCP的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法?这里每一种算法各起什么作用? “乘法减小”和“加法增大”各用在什么情况下?</p>
+<ul>
+<li>慢开始: 主机刚开始发送报文段时可先将拥塞窗口cwnd设置为一个最大报文段MSS的数值，每收到新报文确认后将拥塞窗口增加至多一个MSS的数值，逐步增大发送端的拥塞窗口cwnd</li>
+<li>拥塞避免: 拥塞窗口值大于慢开始门限时，停止使用慢开始算法而改用拥塞避免算法，使发送的拥塞窗口每经过一个RTT就增加一个MSS的大小</li>
+<li>快重传: 发送端连续收到三个重复ACK即可断定分组丢失，应该立即重传丢失的报文段而不必继续等待为该报文段设置的重传计时器超时</li>
+<li>快恢复: 发送端收到连续三个重复ACK时，重新设置门限ssthresh(当前cwnd/2)，与慢开始不同的是拥塞窗口cwnd不是1，而是设置为设置后的ssthresh，若发送窗口还容许发送，就按拥塞避免算法继续发送</li>
+<li>乘法减小: 不论是在慢开始还是拥塞避免，只要出现一次超时，就把慢开始门限值ssthresh设置为当前拥塞窗口值乘0.5</li>
+<li>加法增大: 执行拥塞避免后，在经过一个RTT后，就把cwnd增加一个MSS 大小，使拥塞窗口缓慢增大，以防止网络过早出现拥塞</li>
+</ul>
+</li>
+<li>
+<p>解释为什么突然释放运输连接就可能会丢失用户数据，而使用 TCP 的连接释放方法就可保证不丢失数据。</p>
+<ul>
+<li>主机1和2建立连接后，主机1发送一个TCP数据段并正确抵达主机2，接着主机1发送另一个TCP数据段但在主机2收到之前就发出释放链接请求，就这样突然释放显然这个报文段会丢失。</li>
+<li>而使用TCP连接释放方法，2在收到1的确认后只会释放2到1方向的连接但不会释放反方向，2仍可接收1发来的数据，可保证不丢失数据</li>
+</ul>
+</li>
+<li>
+<p>某客户使用 UDP 将数据发送给一服务器，数据共 16 字节。试计算在运输层的传输效率（有用字节与总字节之比）</p>
+<ul>
+<li>UDP头部8字节，总长度16 + 8 = 24字节</li>
+<li>传输效率 = (16/24) * 100% = 66.7%</li>
+</ul>
+</li>
+<li>
+<p>流量控制和拥塞控制的最主要的区别是什么？发送窗口的大小取决于流量控制还是拥塞控制？</p>
+<ul>
+<li>流量控制: 在TCP连接接收端才采用的措施，用于限制对方发送报文速率，只控制发送端</li>
+<li>拥塞控制: TCP中控制发送端发送报文段的速率，防止互联网某处过载。可能会同时控制多个发送端并限制速率。不过每个发送端只知道自己如何调整，不知道互联网中还有哪些主机被限速</li>
+<li>发送窗口上限是 $Min[rwnd, cwnd]$ , 发送窗口不能超过接收和拥塞窗口中较小的一个。接收窗口大小体现的是接收端对发送端施加的流量控制，拥塞窗口大小是整个互联网负载情况对发送端施加的拥塞控制。因此
+<ul>
+<li>rwnd &lt; cwnd，取决于流量控制，即接收端接收能力</li>
+<li>cwnd &lt; rwnd，取决于拥塞控制，整个网络的拥塞状况</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://arkuna.pluteam.site/categories/%E5%A4%8D%E4%B9%A0/">复习</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+</div>
+
+             <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            <span><a href="https://arkuna.pluteam.site/"></a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span><a href="https://arkuna.pluteam.site/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+ 
+        </div>
+
+           
+<script
+    type="text/javascript"
+    src="/bundle.min.67e365acd5548b6617084dd73683e2f765c4cb433d121fdafcac0aaf96e18a3e4ab1ab372028088c07453b7e98abbbb972319ee2781d95dfcaa15c0d9966149e.js"
+    integrity="sha512-Z&#43;NlrNVUi2YXCE3XNoPi92XEy0M9Eh/a/KwKr5bhij5Ksas3ICgIjAdFO36Yq7u5cjGe4ngdld/KoVwNmWYUng=="
+></script>
+
+ 
+
+    </body>
+</html>

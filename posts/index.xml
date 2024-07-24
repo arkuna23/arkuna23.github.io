@@ -1,0 +1,123 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Arkuna&#39;s nonsense</title>
+        <link>https://arkuna.pluteam.site/posts/</link>
+        <description>Recent content in Posts on Arkuna&#39;s nonsense</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Wed, 24 Jul 2024 20:22:45 +0800</lastBuildDate>
+        <atom:link href="https://arkuna.pluteam.site/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>我的Neovim配置</title>
+            <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
+            <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
+            
+            <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
+            <description>我自己正在使用的配置: Github 目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面 动机 我的工作环境从w</description>
+            <content type="html"><![CDATA[<p>我自己正在使用的配置: <a href="https://github.com/arkuna23/nvim_conf">Github</a></p>
+<p>目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面</p>
+<h2 id="动机">动机</h2>
+<p>我的工作环境从windows迁移到了linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器</p>
+<h2 id="安装">安装</h2>
+<p>根据自己的喜好选择安装方式，系统包管理或者是从源码编译，等等，这里不再赘述</p>
+<blockquote>
+<p>Arch Linux</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ sudo pacman -S neovim
+</span></span></code></pre></div><h2 id="插件管理">插件管理</h2>
+<p>我使用的插件管理器是<a href="https://github.com/folke/lazy.nvim">lazy.nvim</a></p>
+<p>之前看到了一个视频，利用lazy.nvim的懒加载将nvim的启动速度提升到了20ms上下，非常的快，于是就有了我的nvim配置重构(之前用的是lazyvim发行版)</p>
+<p>基本是直接照着<a href="https://shaobin-jiang.github.io/blog/posts/neovim-startup/">博客</a>的介绍抄的解决方案，但因为我的插件更多一些，所以遇到了一些问题</p>
+<h3 id="配置重构与遇到的问题">配置重构与遇到的问题</h3>
+<ul>
+<li>
+<p>nvim-tree插件打开文件浏览器后lualine插件的状态栏被分成了两个</p>
+<p><img src="/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/images/2024-07-24-21-02-50.png"></p>
+<p>设置<code>vim.o.laststatus = 3</code>即可解决，保证全局只有一个状态栏</p>
+</li>
+<li>
+<p>bufferline插件，主题颜色不生效</p>
+<p>我懒得做其他处理了，直接设置bufferline的颜色来修改</p>
+<p>主题色</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> bufferline_theme <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    normal <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        bg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#1e2030&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    visible <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        bg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#0c253c&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    selected <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        bg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#2A3458&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在配置函数中自动设定颜色</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> highlights <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    fill <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        bg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    background <span style="color:#f92672">=</span> bufferline_theme.normal,
+</span></span><span style="display:flex;"><span>    indicator_visible <span style="color:#f92672">=</span> bufferline_theme.visible,
+</span></span><span style="display:flex;"><span>    separator <span style="color:#f92672">=</span> bufferline_theme.normal,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _, v <span style="color:#66d9ef">in</span> ipairs({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;buffer&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;error&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;numbers&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;close_button&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;diagnostic&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;warning&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;warning_diagnostic&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;error&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;error_diagnostic&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;modified&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;duplicate&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hint&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hint_diagnostic&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;info&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;info_diagnostic&#34;</span>,
+</span></span><span style="display:flex;"><span>}) <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    highlights[v] <span style="color:#f92672">=</span> bufferline_theme.normal
+</span></span><span style="display:flex;"><span>    highlights[v <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34;_visible&#34;</span>] <span style="color:#f92672">=</span> bufferline_theme.visible
+</span></span><span style="display:flex;"><span>    highlights[v <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34;_selected&#34;</span>] <span style="color:#f92672">=</span> bufferline_theme.selected
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>opts.highlights <span style="color:#f92672">=</span> highlights
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="配置结构">配置结构</h2>
+<ul>
+<li>lua/config/ 用来存放nvim自身的配置</li>
+<li>lua/lib/ 存放工具函数等多次重用的代码</li>
+<li>lua/plugins/ 存放插件的配置</li>
+</ul>
+<h2 id="插件">插件</h2>
+<p>像nvim-lspconfig，mason这类插件的基础配置网上很容易查到，这里说我自己的部分配置</p>
+<p>lsp，treesitter之类的长一些的配置都放到了<a href="https://github.com/arkuna23/nvim_conf/blob/main/lua/plugins/conf.lua">lua/plugins/conf.lua</a>中</p>
+<h3 id="mason">Mason</h3>
+<p>比较核心的插件，用来安装一系列程序(formatter，lsp等)</p>
+<h3 id="lsp">LSP</h3>
+<p>我这里使用mason-lspconfig插件来自动安装lsp，这个插件可以自动将nvim-lspconfig插件的lsp名称翻译成mason package的名称进行安装</p>
+<blockquote>
+<p>mason-lspconfig</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>opts <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    ensure_installed <span style="color:#f92672">=</span> table.keys(config.lsp),
+</span></span><span style="display:flex;"><span>} <span style="color:#75715e">-- 自动按lsp配置表的键名安装</span>
+</span></span></code></pre></div><h3 id="formatter">Formatter</h3>
+<p>手动格式化代码太累，用过formatter就再也回不去了，不配不行</p>
+<p>我这里使用的格式化插件是<a href="https://github.com/stevearc/conform.nvim">conform.nvim</a>，formatter同样使用mason自动安装</p>
+<h2 id="轻量化模块化">轻量化，模块化</h2>
+<p>我设定了一个指令用于开关插件启用(<code>TogglePluginsEnabled</code>)，默认是关闭的，执行指令后才会启用lazy.nvim和所有的插件</p>
+<p>接下来还有把插件进行细分，之后可选安装的打算</p>
+<h2 id="成果">成果</h2>
+<p><img alt="dashboard" src="/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/images/2024-07-24-21-54-13.png"></p>
+<p><img alt="cmp" src="/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/images/2024-07-24-21-55-20.png"></p>
+<p><img alt="telescope" src="/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/images/2024-07-24-21-56-01.png"></p>
+<p>究极电子积木，可自定义程度太高，对我来说不少场景已经可以替换掉vscode了</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
