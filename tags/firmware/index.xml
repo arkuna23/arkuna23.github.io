@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Firmware on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/tags/firmware/</link>
+    <link>https://arkuna.pluteam.site/tags/firmware/</link>
     <description>Recent content in Firmware on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://arkuna.pluteam.site/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用极路由4刷OpenWrt</title>
-      <link>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
+      <link>https://arkuna.pluteam.site/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
       <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
+      <guid>https://arkuna.pluteam.site/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;想玩openwrt了，听说极路由4刷openwrt难度较低，于是就有了这个&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装breed&#34;&gt;安装Breed&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://breed.hackpascal.net/&#34;&gt;下载地址&lt;/a&gt;&#xA;下载&lt;a href=&#34;https://breed.hackpascal.net/breed-mt7621-hiwifi-hc5962.bin&#34;&gt;breed-mt7621-hiwifi-hc5962.bin&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;离线root&#34;&gt;离线root&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/local-ssh/&#34;&gt;local_token&lt;/a&gt;, 第一个框就是(刷新会变)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/cgi-bin/turbo/proxy/router_info&#34;&gt;uuid&lt;/a&gt;，找到名字叫uuid的键，值就是uuid(固定的)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;www.hiwifi.wtf&#34;&gt;cloud_token&lt;/a&gt;，之后回到local_token获取的页面，填入第二个框，之后提交。如果出现&lt;code&gt;Success: ssh port is 22&lt;/code&gt;，说明成功&lt;/p&gt;</description>
     </item>
   </channel>

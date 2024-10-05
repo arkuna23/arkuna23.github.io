@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nvim on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/tags/nvim/</link>
+    <link>https://arkuna.pluteam.site/tags/nvim/</link>
     <description>Recent content in Nvim on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 24 Jul 2024 20:22:45 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://arkuna.pluteam.site/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的Neovim配置</title>
-      <link>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
+      <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;&#xA;&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;&#xA;&lt;p&gt;我的工作环境从windows迁移到linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器&lt;/p&gt;</description>
     </item>
   </channel>

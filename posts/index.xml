@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Arkuna&#39;s nonsense</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://arkuna.pluteam.site/posts/</link>
         <description>Recent content in Posts on Arkuna&#39;s nonsense</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
-        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://arkuna.pluteam.site/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>用极路由4刷OpenWrt</title>
-            <link>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
+            <link>https://arkuna.pluteam.site/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
             <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
             
-            <guid>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
+            <guid>https://arkuna.pluteam.site/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
             <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;想玩openwrt了，听说极路由4刷openwrt难度较低，于是就有了这个&lt;/p&gt;
 &lt;h2 id=&#34;安装breed&#34;&gt;安装Breed&lt;/h2&gt;
@@ -285,122 +285,11 @@ config &#39;mount&#39;
         </item>
         
         <item>
-            <title>Github Copilot插件的自定义URL</title>
-            <link>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</link>
-            <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
-            
-            <guid>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</guid>
-            <description>&lt;p&gt;因为某些原因我需要使用自定义的Github Copilot服务器地址，但是&lt;a href=&#34;https://github.com/zbirenbaum/copilot.lua&#34;&gt;Copilot.lua&lt;/a&gt;并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。&lt;/p&gt;
-&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;
-&lt;p&gt;Copilot.lua参考的是&lt;a href=&#34;https://github.com/github/copilot.vim&#34;&gt;Copilot.vim&lt;/a&gt;的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在&lt;a href=&#34;https://github.com/github/copilot.vim/tree/release/dist&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;修改&#34;&gt;修改&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改&lt;/p&gt;</description>
-            <content type="html"><![CDATA[<p>因为某些原因我需要使用自定义的Github Copilot服务器地址，但是<a href="https://github.com/zbirenbaum/copilot.lua">Copilot.lua</a>并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。</p>
-<h2 id="分析">分析</h2>
-<p>Copilot.lua参考的是<a href="https://github.com/github/copilot.vim">Copilot.vim</a>的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在<a href="https://github.com/github/copilot.vim/tree/release/dist">这里</a></p>
-<h2 id="修改">修改</h2>
-<ol>
-<li>
-<p>Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-patch" data-lang="patch"><span style="display:flex;"><span>diff --git a/copilot/dist/agent.js b/copilot/dist/agent.js
-</span></span><span style="display:flex;"><span>deleted file mode 100644
-</span></span><span style="display:flex;"><span>index 5cd60d4..0000000
-</span></span><span style="display:flex;"><span>Binary files a/copilot/dist/agent.js and /dev/null differ
-</span></span><span style="display:flex;"><span>diff --git a/copilot/dist/agent.js.map b/copilot/dist/agent.js.map
-</span></span><span style="display:flex;"><span>deleted file mode 100644
-</span></span><span style="display:flex;"><span>index 13391c6..0000000
-</span></span><span style="display:flex;"><span>Binary files a/copilot/dist/agent.js.map and /dev/null differ
-</span></span><span style="display:flex;"><span>diff --git a/copilot/index.js b/copilot/index.js
-</span></span><span style="display:flex;"><span>index 17aa9f2..db74eae 100755
-</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/copilot/index.js
-</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/copilot/index.js
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -2,4 +2,4 @@
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>global.__rootDirectory = __dirname + &#39;/dist/&#39;;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">-require(&#39;./dist/agent.js&#39;)
-</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+require(&#39;./dist/language-server.js&#39;)
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>diff --git a/lua/copilot/client.lua b/lua/copilot/client.lua
-</span></span><span style="display:flex;"><span>index 8c1111a..2ea3cdc 100644
-</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/lua/copilot/client.lua
-</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/lua/copilot/client.lua
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -166,7 +166,7 @@ local function prepare_client_config(overrides)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>local agent_path = vim.api.nvim_get_runtime_file(&#34;copilot/index.js&#34;, false)[1]
-</span></span><span style="display:flex;"><span>if vim.fn.filereadable(agent_path) == 0 then
-</span></span><span style="display:flex;"><span><span style="color:#f92672">-    local err = string.format(&#34;Could not find agent.js (bad install?) : %s&#34;, agent_path)
-</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+    local err = string.format(&#34;Could not find language-server.js (bad install?) : %s&#34;, agent_path)
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    vim.notify(&#34;[Copilot] &#34; .. err, vim.log.levels.ERROR)
-</span></span><span style="display:flex;"><span>    M.startup_error = err
-</span></span><span style="display:flex;"><span>    return
-</span></span></code></pre></div></li>
-<li>
-<p>格式化一下入口文件，根据vscode插件的相关配置猜测跟enterprise有关，搜索，一路向上追踪引用</p>
-<ol>
-<li>
-<p>通过环境变量构造url对象</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">ti</span>, <span style="color:#a6e22e">a</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">T5</span>, <span style="color:#a6e22e">a</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">Di</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Di</span>(<span style="color:#a6e22e">r</span>)), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">zr</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">wO</span>(<span style="color:#a6e22e">r</span>)),
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">UMe</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">env</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">recalculateUrlDefaults</span>(<span style="color:#a6e22e">n</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">Ss</span>).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;onCopilotToken&#34;</span>, <span style="color:#a6e22e">s</span> =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onCopilotToken</span>(<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">s</span>));
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">wO</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Dle</span>;
-</span></span></code></pre></div></li>
-<li>
-<p>重新构造url(在这里找到的isEnterprise变量)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">recalculateUrlDefaults</span>(<span style="color:#a6e22e">r</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">parseUrls</span>(<span style="color:#a6e22e">r</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseUrlObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">base</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">api</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isEnterprise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseUrlObject</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">qMe</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">apiUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">href</span>,
-</span></span><span style="display:flex;"><span>    ... <span style="color:#75715e">//重新构造请求url
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div></li>
-<li>
-<p>里面有个<code>parseUrls</code>函数，构造url</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">parseUrls</span>(<span style="color:#a6e22e">r</span>) {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#a6e22e">r</span>), <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">prefixWith</span>(<span style="color:#e6db74">&#34;api.&#34;</span>, <span style="color:#a6e22e">n</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">base</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">n</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">api</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">i</span>
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-<li>
-<p>以上应该是默认的构造方式，关键点在于<code>recalculateUrlDefaults</code>函数，搜索一下调用，找到还有个<code>updateBaseUrl</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hWe</span>(<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">t</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">AWe</span>.<span style="color:#a6e22e">Check</span>(<span style="color:#a6e22e">t</span>)) <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">vf</span>(<span style="color:#a6e22e">AWe</span>.<span style="color:#a6e22e">Errors</span>(<span style="color:#a6e22e">t</span>))
-</span></span><span style="display:flex;"><span>        ...
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">authProvider</span> <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">zr</span>).<span style="color:#a6e22e">updateBaseUrl</span>(<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">authProvider</span>.<span style="color:#a6e22e">url</span>),
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">lhe</span>(<span style="color:#a6e22e">e</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>根据这个字符串内容猜测是LSP的json-rpc消息处理函数</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">o</span>(<span style="color:#a6e22e">hWe</span>, <span style="color:#e6db74">&#34;notifyChangeConfiguration&#34;</span>);
-</span></span></code></pre></div></li>
-<li>
-<p>经过测试，<code>updateBaseUrl</code>在lsp启动时会被<code>didChangeConfiguration</code>请求的处理函数调用，主要使用<code>authProvider</code>字段的url参数。好像这个url修改函数的调用只能发生在initialize请求之后，initialize请求没法调用</p>
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
-        </item>
-        
-        <item>
             <title>如何构建和运行Vaultwarden</title>
-            <link>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
+            <link>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
             <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
             
-            <guid>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
+            <guid>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
             <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目
@@ -538,10 +427,10 @@ SIGNUPS_ALLOWED=true
         
         <item>
             <title>我的Neovim配置</title>
-            <link>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
+            <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
             <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
             
-            <guid>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
+            <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
             <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;
 &lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;

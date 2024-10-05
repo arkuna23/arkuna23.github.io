@@ -2,60 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://arkuna.pluteam.site/tags/</link>
     <description>Recent content in Tags on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://arkuna.pluteam.site/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firmware</title>
-      <link>http://localhost:1313/tags/firmware/</link>
+      <link>https://arkuna.pluteam.site/tags/firmware/</link>
       <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
-      <guid>http://localhost:1313/tags/firmware/</guid>
+      <guid>https://arkuna.pluteam.site/tags/firmware/</guid>
       <description></description>
     </item>
     <item>
       <title>GNU/Linux</title>
-      <link>http://localhost:1313/tags/gnu/linux/</link>
+      <link>https://arkuna.pluteam.site/tags/gnu/linux/</link>
       <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
-      <guid>http://localhost:1313/tags/gnu/linux/</guid>
+      <guid>https://arkuna.pluteam.site/tags/gnu/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenWrt</title>
-      <link>http://localhost:1313/tags/openwrt/</link>
+      <link>https://arkuna.pluteam.site/tags/openwrt/</link>
       <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
-      <guid>http://localhost:1313/tags/openwrt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Editor</title>
-      <link>http://localhost:1313/tags/editor/</link>
-      <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
-      <guid>http://localhost:1313/tags/editor/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GH Copilot</title>
-      <link>http://localhost:1313/tags/gh-copilot/</link>
-      <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
-      <guid>http://localhost:1313/tags/gh-copilot/</guid>
+      <guid>https://arkuna.pluteam.site/tags/openwrt/</guid>
       <description></description>
     </item>
     <item>
       <title>Server</title>
-      <link>http://localhost:1313/tags/server/</link>
+      <link>https://arkuna.pluteam.site/tags/server/</link>
       <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
-      <guid>http://localhost:1313/tags/server/</guid>
+      <guid>https://arkuna.pluteam.site/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Editor</title>
+      <link>https://arkuna.pluteam.site/tags/editor/</link>
+      <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
+      <guid>https://arkuna.pluteam.site/tags/editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Nvim</title>
-      <link>http://localhost:1313/tags/nvim/</link>
+      <link>https://arkuna.pluteam.site/tags/nvim/</link>
       <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
-      <guid>http://localhost:1313/tags/nvim/</guid>
+      <guid>https://arkuna.pluteam.site/tags/nvim/</guid>
       <description></description>
     </item>
   </channel>

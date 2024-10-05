@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://arkuna.pluteam.site/categories/</link>
     <description>Recent content in Categories on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://arkuna.pluteam.site/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>复习</title>
-      <link>http://localhost:1313/categories/%E5%A4%8D%E4%B9%A0/</link>
+      <link>https://arkuna.pluteam.site/categories/%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>https://arkuna.pluteam.site/categories/%E5%A4%8D%E4%B9%A0/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Server on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/tags/server/</link>
+    <link>https://arkuna.pluteam.site/tags/server/</link>
     <description>Recent content in Server on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 14 Aug 2024 21:37:21 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://arkuna.pluteam.site/tags/server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何构建和运行Vaultwarden</title>
-      <link>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
+      <link>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
       <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
+      <guid>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目&#xA;Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站登录凭据）&lt;/p&gt;</description>
     </item>
   </channel>
