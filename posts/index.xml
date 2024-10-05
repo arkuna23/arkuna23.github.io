@@ -1,20 +1,406 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Arkuna&#39;s nonsense</title>
-        <link>https://arkuna.pluteam.site/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>Recent content in Posts on Arkuna&#39;s nonsense</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
-        <atom:link href="https://arkuna.pluteam.site/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>用极路由4刷OpenWrt</title>
+            <link>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
+            <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
+            
+            <guid>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;想玩openwrt了，听说极路由4刷openwrt难度较低，于是就有了这个&lt;/p&gt;
+&lt;h2 id=&#34;安装breed&#34;&gt;安装Breed&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://breed.hackpascal.net/&#34;&gt;下载地址&lt;/a&gt;
+下载&lt;a href=&#34;https://breed.hackpascal.net/breed-mt7621-hiwifi-hc5962.bin&#34;&gt;breed-mt7621-hiwifi-hc5962.bin&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;离线root&#34;&gt;离线root&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/local-ssh/&#34;&gt;local_token&lt;/a&gt;, 第一个框就是(刷新会变)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/cgi-bin/turbo/proxy/router_info&#34;&gt;uuid&lt;/a&gt;，找到名字叫uuid的键，值就是uuid(固定的)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取&lt;a href=&#34;www.hiwifi.wtf&#34;&gt;cloud_token&lt;/a&gt;，之后回到local_token获取的页面，填入第二个框，之后提交。如果出现&lt;code&gt;Success: ssh port is 22&lt;/code&gt;，说明成功&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>想玩openwrt了，听说极路由4刷openwrt难度较低，于是就有了这个</p>
+<h2 id="安装breed">安装Breed</h2>
+<p><a href="https://breed.hackpascal.net/">下载地址</a>
+下载<a href="https://breed.hackpascal.net/breed-mt7621-hiwifi-hc5962.bin">breed-mt7621-hiwifi-hc5962.bin</a></p>
+<h3 id="离线root">离线root</h3>
+<ol>
+<li>
+<p>获取<a href="http://192.168.199.1/local-ssh/">local_token</a>, 第一个框就是(刷新会变)</p>
+</li>
+<li>
+<p>获取<a href="http://192.168.199.1/cgi-bin/turbo/proxy/router_info">uuid</a>，找到名字叫uuid的键，值就是uuid(固定的)</p>
+</li>
+<li>
+<p>获取<a href="www.hiwifi.wtf">cloud_token</a>，之后回到local_token获取的页面，填入第二个框，之后提交。如果出现<code>Success: ssh port is 22</code>，说明成功</p>
+</li>
+<li>
+<p>用ssh登录路由器，ip是192.168.199.1，使用以下指令开启永久ssh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/init.d/dropbear enable <span style="color:#f92672">&amp;&amp;</span> /etc/init.d/dropbear start
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="刷入配置breed">刷入，配置Breed</h3>
+<ol>
+<li>
+<p>上传下载的breed安装文件(.bin)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp breed-mt7621-hiwifi-hc5962.bin root@192.168.199.1:/tmp/breed.bin
+</span></span></code></pre></div></li>
+<li>
+<p>刷入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mtd write /tmp/breed.bin u-boot
+</span></span></code></pre></div></li>
+<li>
+<p>之后重启路由器，完成后拔掉电源和网线，按住reset键的同时插上电源，等待5秒，看到指示灯连闪几下后松开，之后用网线插上电脑</p>
+</li>
+<li>
+<p>192.168.1.1 进入breed，在固件备份选项中备份好eeprom和编程器固件</p>
+</li>
+</ol>
+<h2 id="刷入openwrt">刷入OpenWrt</h2>
+<p><a href="https://downloads.openwrt.org/">下载地址</a>，选好版本之后进入ramips/mt7621/
+之后下载hiwifi_hc5962-squashfs-factory.bin(固件)</p>
+<ol>
+<li>
+<p>进入breed，选择固件更新点击固件更新的选择文件，选择下载的固件，之后点上传，上传完毕后更新</p>
+</li>
+<li>
+<p>等待ip获取完成，之后重新进入后台</p>
+<p>默认地址：192.168.1.1</p>
+<p>默认账号：root</p>
+<p>默认密码：password</p>
+</li>
+<li>
+<p>防止ip冲突，可以通过以下方式修改路由地址</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uci set network.lan.ipaddr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;新地址&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>uci commit network
+</span></span><span style="display:flex;"><span>uci delete dhcp.lan.dhcp_option
+</span></span><span style="display:flex;"><span>uci add_list dhcp.lan.dhcp_option<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;6,&lt;新地址&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>reboot
+</span></span></code></pre></div></li>
+<li>
+<p>配置网络</p>
+<ul>
+<li>
+<p>配置DNS</p>
+<p>因为我这里的网比较特殊，需要配置一下dns才能用</p>
+<p>在Network-&gt;Interfaces中找到lan，点击edit，Advanced Settings-&gt;Use custom DNS servers，填入114.114.114.114，之后再添加8.8.8.8，最后点击save保存</p>
+</li>
+</ul>
+</li>
+<li>
+<p>换源</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s_https\?://downloads.openwrt.org_https://mirrors.tuna.tsinghua.edu.cn/openwrt_&#39;</span> /etc/opkg/distfeeds.conf
+</span></span><span style="display:flex;"><span>opkg update
+</span></span></code></pre></div><p>这个源还包含版本号和架构，最好使用上面的指令换，最开始我就是没注意直接复制别人的配置导致无法正常更新</p>
+<p>每次安装的时候安装不了就试试<code>opkg update</code></p>
+</li>
+<li>
+<p>安装中文语言包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>opkg install luci-i18n-base-zh-cn
+</span></span></code></pre></div><p>之后刷新网页，就会变成中文了</p>
+</li>
+<li>
+<p>设定wifi</p>
+<ul>
+<li>网络-&gt;无线，radio0下面的是2.4G的wifi设定，radio1下面的是5G的wifi设定，点击编辑进行设定</li>
+<li>无线安全里可以设定密码，加密选WPA2-PSK</li>
+<li>设定后点击编辑旁的启用打开wifi</li>
+</ul>
+</li>
+</ol>
+<p>基础安装完成</p>
+<h2 id="主题">主题</h2>
+<h3 id="luci-theme-argon">luci-theme-argon</h3>
+<p><img alt="预览" src="/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/images/argon.png"></p>
+<ol>
+<li>
+<p>安装依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>opkg install luci-compat
+</span></span><span style="display:flex;"><span>opkg install luci-lib-ipkg
+</span></span></code></pre></div></li>
+<li>
+<p>在<a href="https://github.com/jerrykuku/luci-theme-argon/releases">这里</a>下载主题的ipk</p>
+</li>
+<li>
+<p>在管理页面的系统-&gt;软件包里上传ipk文件，之后安装</p>
+</li>
+<li>
+<p>之后在系统-&gt;系统-&gt;语言和界面里选择argon主题，完成</p>
+</li>
+</ol>
+<h2 id="其他">其他</h2>
+<h3 id="openwrt升级">OpenWrt升级</h3>
+<p>依旧是<a href="/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/#刷入OpenWrt">上文</a>中的下载地址，下载hiwifi_hc5962-squashfs-sysupgrade.bin</p>
+<ol>
+<li>进入管理页面，系统-&gt;备份与升级</li>
+<li>刷写新的固件-&gt;选择下载的固件-&gt;上传</li>
+<li>验证sha256，防止之后刷入错误固件，之后点击继续</li>
+<li>升级完成，重新配置</li>
+</ol>
+<h3 id="使用usb存储设备扩容">使用usb存储设备扩容</h3>
+<p>这里分区格式使用ext4分区</p>
+<ol>
+<li>
+<p>给usb设备分区，使用ext4，第一个分区作为openwrt的根目录分区，这里不再阐述</p>
+</li>
+<li>
+<p>使openwrt支持usb拓展</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>opkg install kmod-fs-ext4 block-mount kmod-usb-storage
+</span></span></code></pre></div></li>
+<li>
+<p>复制当前根目录的所有文件到设备的根目录分区</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir /mnt/udisk
+</span></span><span style="display:flex;"><span>mount /dev/sda1 /mnt/udisk
+</span></span><span style="display:flex;"><span>mkdir /tmp/root
+</span></span><span style="display:flex;"><span>mount --bind / /tmp/root
+</span></span><span style="display:flex;"><span>tar -C /tmp/root -cvf - . | tar -C /mnt/udisk -xvf -
+</span></span><span style="display:flex;"><span>sync
+</span></span><span style="display:flex;"><span>umount /tmp/root
+</span></span></code></pre></div><p>命令的含义：</p>
+<p>创建下面设备分区要挂载的目录</p>
+<p>将设备中要作为根目录分区挂载到 /mnt/udisk</p>
+<p>创建一个临时目录，用于拷贝根目录文件</p>
+<p>将当前根目录以 bind 的方式挂载到临时目录，此时临时目录里可以看到和根目录一样的文件</p>
+<p>将临时目录的内容打包并解压到 /mnt/disk，tar 用于保留文件的属性信息</p>
+<p>将所有缓存写入 ROM</p>
+<p>取消挂载</p>
+</li>
+<li>
+<p>将设备分区挂载到根目录</p>
+<ol>
+<li>
+<p>写入fstab</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>block detect &gt; /etc/config/fstab
+</span></span></code></pre></div></li>
+<li>
+<p>修改fstab，编辑后如下</p>
+<pre tabindex="0"><code>config &#39;global&#39;
+        option  anon_swap       &#39;0&#39;
+        option  anon_mount      &#39;0&#39;
+        option  auto_swap       &#39;1&#39;
+        option  auto_mount      &#39;1&#39;
+        option  delay_root      &#39;5&#39;
+        option  check_fs        &#39;0&#39;
+
+config &#39;mount&#39;
+        option  target  &#39;/&#39;
+        option  uuid    &#39;a1a350d9-cbda-403c-8681-1f88297f80a3&#39;
+        option  enabled &#39;1&#39;
+</code></pre><p>只需要修改mount部分，target改成 / (为了挂载在根目录下)，uuid改成设备分区的uuid(应该不用改，因为上面的步骤已经生成了)，enabled改成 1</p>
+</li>
+<li>
+<p>重启</p>
+</li>
+</ol>
+</li>
+<li>
+<p>修改 /var，不再指向 /tmp</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm /var
+</span></span><span style="display:flex;"><span>mkdir /var
+</span></span><span style="display:flex;"><span>cp -r /tmp/* /var/
+</span></span><span style="display:flex;"><span>reboot
+</span></span></code></pre></div></li>
+<li>
+<p>之后就完成了，想挂载其他的盘自由发挥</p>
+</li>
+</ol>
+<h3 id="syncthing">Syncthing</h3>
+<ol>
+<li>
+<p>安装</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>opkg install syncthing
+</span></span></code></pre></div></li>
+<li>
+<p>配置服务</p>
+<p>修改 /etc/init.d/syncthing，原本的服务文件并不能正常使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh /etc/rc.common
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>START<span style="color:#f92672">=</span><span style="color:#ae81ff">95</span>
+</span></span><span style="display:flex;"><span>STOP<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>USE_PROCD<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PROG<span style="color:#f92672">=</span>syncthing
+</span></span><span style="display:flex;"><span>PROG_PATH<span style="color:#f92672">=</span>/usr/bin/syncthing
+</span></span><span style="display:flex;"><span>USER<span style="color:#f92672">=</span>syncthing
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start_service<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    logger -t <span style="color:#e6db74">&#34;</span>$PROG<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;Starting </span>$PROG<span style="color:#e6db74">...&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    procd_open_instance
+</span></span><span style="display:flex;"><span>    procd_set_param command $PROG_PATH --home<span style="color:#f92672">=</span>/etc/syncthing
+</span></span><span style="display:flex;"><span>    procd_set_param user $USER
+</span></span><span style="display:flex;"><span>    procd_set_param respawn
+</span></span><span style="display:flex;"><span>    procd_set_param respawn_limit <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    procd_set_param stdout <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    procd_set_param stderr <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    procd_close_instance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    logger -t <span style="color:#e6db74">&#34;</span>$PROG<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$PROG<span style="color:#e6db74"> started successfully.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>stop_service<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    logger -t <span style="color:#e6db74">&#34;</span>$PROG<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;Stopping </span>$PROG<span style="color:#e6db74">...&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>restart<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    stop
+</span></span><span style="display:flex;"><span>    start
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>设置权限</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown -R syncthing /etc/syncthing
+</span></span></code></pre></div></li>
+<li>
+<p>启动服务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/init.d/syncthing enable
+</span></span><span style="display:flex;"><span>/etc/init.d/syncthing start
+</span></span></code></pre></div></li>
+<li>
+<p>停止服务，设置 /etc/syncthing/config.xml，找到gui部分，address改成你的路由器地址(192.168.1.1:8384)</p>
+</li>
+<li>
+<p>重启服务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/init.d/syncthing restart
+</span></span></code></pre></div></li>
+<li>
+<p>之后就可以通过浏览器访问路由器地址:8384，进行配置，完成</p>
+</li>
+</ol>
+<p>我的<a href="https://gist.github.com/arkuna23/af8b929ac05228418ad445480816d2c5">.stignore</a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Github Copilot插件的自定义URL</title>
+            <link>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</link>
+            <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
+            
+            <guid>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</guid>
+            <description>&lt;p&gt;因为某些原因我需要使用自定义的Github Copilot服务器地址，但是&lt;a href=&#34;https://github.com/zbirenbaum/copilot.lua&#34;&gt;Copilot.lua&lt;/a&gt;并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。&lt;/p&gt;
+&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;
+&lt;p&gt;Copilot.lua参考的是&lt;a href=&#34;https://github.com/github/copilot.vim&#34;&gt;Copilot.vim&lt;/a&gt;的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在&lt;a href=&#34;https://github.com/github/copilot.vim/tree/release/dist&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改&#34;&gt;修改&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>因为某些原因我需要使用自定义的Github Copilot服务器地址，但是<a href="https://github.com/zbirenbaum/copilot.lua">Copilot.lua</a>并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。</p>
+<h2 id="分析">分析</h2>
+<p>Copilot.lua参考的是<a href="https://github.com/github/copilot.vim">Copilot.vim</a>的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在<a href="https://github.com/github/copilot.vim/tree/release/dist">这里</a></p>
+<h2 id="修改">修改</h2>
+<ol>
+<li>
+<p>Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-patch" data-lang="patch"><span style="display:flex;"><span>diff --git a/copilot/dist/agent.js b/copilot/dist/agent.js
+</span></span><span style="display:flex;"><span>deleted file mode 100644
+</span></span><span style="display:flex;"><span>index 5cd60d4..0000000
+</span></span><span style="display:flex;"><span>Binary files a/copilot/dist/agent.js and /dev/null differ
+</span></span><span style="display:flex;"><span>diff --git a/copilot/dist/agent.js.map b/copilot/dist/agent.js.map
+</span></span><span style="display:flex;"><span>deleted file mode 100644
+</span></span><span style="display:flex;"><span>index 13391c6..0000000
+</span></span><span style="display:flex;"><span>Binary files a/copilot/dist/agent.js.map and /dev/null differ
+</span></span><span style="display:flex;"><span>diff --git a/copilot/index.js b/copilot/index.js
+</span></span><span style="display:flex;"><span>index 17aa9f2..db74eae 100755
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/copilot/index.js
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/copilot/index.js
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -2,4 +2,4 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>global.__rootDirectory = __dirname + &#39;/dist/&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-require(&#39;./dist/agent.js&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+require(&#39;./dist/language-server.js&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>diff --git a/lua/copilot/client.lua b/lua/copilot/client.lua
+</span></span><span style="display:flex;"><span>index 8c1111a..2ea3cdc 100644
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/lua/copilot/client.lua
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/lua/copilot/client.lua
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -166,7 +166,7 @@ local function prepare_client_config(overrides)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>local agent_path = vim.api.nvim_get_runtime_file(&#34;copilot/index.js&#34;, false)[1]
+</span></span><span style="display:flex;"><span>if vim.fn.filereadable(agent_path) == 0 then
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-    local err = string.format(&#34;Could not find agent.js (bad install?) : %s&#34;, agent_path)
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+    local err = string.format(&#34;Could not find language-server.js (bad install?) : %s&#34;, agent_path)
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    vim.notify(&#34;[Copilot] &#34; .. err, vim.log.levels.ERROR)
+</span></span><span style="display:flex;"><span>    M.startup_error = err
+</span></span><span style="display:flex;"><span>    return
+</span></span></code></pre></div></li>
+<li>
+<p>格式化一下入口文件，根据vscode插件的相关配置猜测跟enterprise有关，搜索，一路向上追踪引用</p>
+<ol>
+<li>
+<p>通过环境变量构造url对象</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">ti</span>, <span style="color:#a6e22e">a</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">T5</span>, <span style="color:#a6e22e">a</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">Di</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Di</span>(<span style="color:#a6e22e">r</span>)), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">zr</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">wO</span>(<span style="color:#a6e22e">r</span>)),
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">UMe</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">env</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">recalculateUrlDefaults</span>(<span style="color:#a6e22e">n</span>), <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">Ss</span>).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;onCopilotToken&#34;</span>, <span style="color:#a6e22e">s</span> =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onCopilotToken</span>(<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">s</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">wO</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Dle</span>;
+</span></span></code></pre></div></li>
+<li>
+<p>重新构造url(在这里找到的isEnterprise变量)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">recalculateUrlDefaults</span>(<span style="color:#a6e22e">r</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">parseUrls</span>(<span style="color:#a6e22e">r</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseUrlObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">base</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">api</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isEnterprise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseUrlObject</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">qMe</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">apiUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">href</span>,
+</span></span><span style="display:flex;"><span>    ... <span style="color:#75715e">//重新构造请求url
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div></li>
+<li>
+<p>里面有个<code>parseUrls</code>函数，构造url</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">parseUrls</span>(<span style="color:#a6e22e">r</span>) {
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#a6e22e">r</span>), <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">prefixWith</span>(<span style="color:#e6db74">&#34;api.&#34;</span>, <span style="color:#a6e22e">n</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">base</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">n</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">api</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">i</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>以上应该是默认的构造方式，关键点在于<code>recalculateUrlDefaults</code>函数，搜索一下调用，找到还有个<code>updateBaseUrl</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hWe</span>(<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">t</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">AWe</span>.<span style="color:#a6e22e">Check</span>(<span style="color:#a6e22e">t</span>)) <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">vf</span>(<span style="color:#a6e22e">AWe</span>.<span style="color:#a6e22e">Errors</span>(<span style="color:#a6e22e">t</span>))
+</span></span><span style="display:flex;"><span>        ...
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">authProvider</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">zr</span>).<span style="color:#a6e22e">updateBaseUrl</span>(<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">authProvider</span>.<span style="color:#a6e22e">url</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">lhe</span>(<span style="color:#a6e22e">e</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>根据这个字符串内容猜测是LSP的json-rpc消息处理函数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">o</span>(<span style="color:#a6e22e">hWe</span>, <span style="color:#e6db74">&#34;notifyChangeConfiguration&#34;</span>);
+</span></span></code></pre></div></li>
+<li>
+<p>经过测试，<code>updateBaseUrl</code>在lsp启动时会被<code>didChangeConfiguration</code>请求的处理函数调用，主要使用<code>authProvider</code>字段的url参数。好像这个url修改函数的调用只能发生在initialize请求之后，initialize请求没法调用</p>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+        </item>
         
         <item>
             <title>如何构建和运行Vaultwarden</title>
-            <link>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
+            <link>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
             <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
             
-            <guid>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
+            <guid>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
             <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目
@@ -152,10 +538,10 @@ SIGNUPS_ALLOWED=true
         
         <item>
             <title>我的Neovim配置</title>
-            <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
+            <link>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
             <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
             
-            <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
+            <guid>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
             <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;
 &lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;

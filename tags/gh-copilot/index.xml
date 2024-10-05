@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Editor on Arkuna&#39;s nonsense</title>
-    <link>http://localhost:1313/tags/editor/</link>
-    <description>Recent content in Editor on Arkuna&#39;s nonsense</description>
+    <title>GH Copilot on Arkuna&#39;s nonsense</title>
+    <link>http://localhost:1313/tags/gh-copilot/</link>
+    <description>Recent content in GH Copilot on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 30 Aug 2024 10:37:17 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/gh-copilot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Copilot插件的自定义URL</title>
       <link>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</link>
       <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
       <guid>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</guid>
       <description>&lt;p&gt;因为某些原因我需要使用自定义的Github Copilot服务器地址，但是&lt;a href=&#34;https://github.com/zbirenbaum/copilot.lua&#34;&gt;Copilot.lua&lt;/a&gt;并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。&lt;/p&gt;&#xA;&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;&#xA;&lt;p&gt;Copilot.lua参考的是&lt;a href=&#34;https://github.com/github/copilot.vim&#34;&gt;Copilot.vim&lt;/a&gt;的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在&lt;a href=&#34;https://github.com/github/copilot.vim/tree/release/dist&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;修改&#34;&gt;修改&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我的Neovim配置</title>
-      <link>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;&#xA;&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;&#xA;&lt;p&gt;我的工作环境从windows迁移到linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

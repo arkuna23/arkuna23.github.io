@@ -2,53 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arkuna&#39;s nonsense</title>
-    <link>https://arkuna.pluteam.site/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Arkuna&#39;s nonsense</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 14 Aug 2024 21:37:21 +0800</lastBuildDate>
-    <atom:link href="https://arkuna.pluteam.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用极路由4刷OpenWrt</title>
+      <link>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</link>
+      <pubDate>Sat, 05 Oct 2024 17:18:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%94%A8%E6%9E%81%E8%B7%AF%E7%94%B14%E5%88%B7openwrt/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;想玩openwrt了，听说极路由4刷openwrt难度较低，于是就有了这个&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装breed&#34;&gt;安装Breed&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://breed.hackpascal.net/&#34;&gt;下载地址&lt;/a&gt;&#xA;下载&lt;a href=&#34;https://breed.hackpascal.net/breed-mt7621-hiwifi-hc5962.bin&#34;&gt;breed-mt7621-hiwifi-hc5962.bin&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;离线root&#34;&gt;离线root&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/local-ssh/&#34;&gt;local_token&lt;/a&gt;, 第一个框就是(刷新会变)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;http://192.168.199.1/cgi-bin/turbo/proxy/router_info&#34;&gt;uuid&lt;/a&gt;，找到名字叫uuid的键，值就是uuid(固定的)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;获取&lt;a href=&#34;www.hiwifi.wtf&#34;&gt;cloud_token&lt;/a&gt;，之后回到local_token获取的页面，填入第二个框，之后提交。如果出现&lt;code&gt;Success: ssh port is 22&lt;/code&gt;，说明成功&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Github Copilot插件的自定义URL</title>
+      <link>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</link>
+      <pubDate>Fri, 30 Aug 2024 10:37:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/github-copilot%E6%8F%92%E4%BB%B6%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89url/</guid>
+      <description>&lt;p&gt;因为某些原因我需要使用自定义的Github Copilot服务器地址，但是&lt;a href=&#34;https://github.com/zbirenbaum/copilot.lua&#34;&gt;Copilot.lua&lt;/a&gt;并不支持，但是vscode和jetbrains家的ide中copilot插件是支持的，我就想要探究一下其他Copilot插件怎样支持。&lt;/p&gt;&#xA;&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;&#xA;&lt;p&gt;Copilot.lua参考的是&lt;a href=&#34;https://github.com/github/copilot.vim&#34;&gt;Copilot.vim&lt;/a&gt;的实现，Copilot本身作为一个LSP来为编辑器提供补全支持，在&lt;a href=&#34;https://github.com/github/copilot.vim/tree/release/dist&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;修改&#34;&gt;修改&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Copilot LSP从1.34开始入口文件不再是agent.js，而是language-server.js，先对插件代码进行修改&lt;/p&gt;</description>
+    </item>
     <item>
       <title>如何构建和运行Vaultwarden</title>
-      <link>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
+      <link>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
       <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
-      <guid>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
+      <guid>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目&#xA;Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站登录凭据）&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的Neovim配置</title>
-      <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
+      <link>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
-      <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://localhost:1313/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;&#xA;&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;&#xA;&lt;p&gt;我的工作环境从windows迁移到linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器&lt;/p&gt;</description>
     </item>
     <item>
       <title>操作系统复习</title>
-      <link>https://arkuna.pluteam.site/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</link>
+      <link>http://localhost:1313/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0800</pubDate>
-      <guid>https://arkuna.pluteam.site/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</guid>
       <description>&lt;h1 id=&#34;1-操作系统引论&#34;&gt;1 操作系统引论&lt;/h1&gt;&#xA;&lt;h2 id=&#34;112-操作系统的作用&#34;&gt;1.1.2 操作系统的作用&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;用户与计算机之间的接口&#xA;&lt;ul&gt;&#xA;&lt;li&gt;也可以说是&amp;quot;向上层提供方便易用的服务&amp;quot;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;系统资源的管理者&lt;/li&gt;&#xA;&lt;li&gt;对计算机资源的抽象&#xA;&lt;ul&gt;&#xA;&lt;li&gt;也可以说是&amp;quot;最接近硬件的一层软件&amp;quot;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;124-分时系统&#34;&gt;1.2.4 分时系统&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;操作性较好&lt;/p&gt;</description>
     </item>
     <item>
       <title>计网复习</title>
-      <link>https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</link>
+      <link>http://localhost:1313/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 23 Jun 2024 00:00:00 +0800</pubDate>
-      <guid>https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</guid>
-      <description>&lt;h1 id=&#34;1-计算机网络概述&#34;&gt;1 计算机网络概述&lt;/h1&gt;&#xA;&lt;h2 id=&#34;计算机网络概念&#34;&gt;计算机网络概念&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;&#xA;&lt;p&gt;将具有&lt;strong&gt;独立功能&lt;/strong&gt;的&lt;strong&gt;多台计算机&lt;/strong&gt;通过&lt;strong&gt;通信线路连接&lt;/strong&gt;，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的计算机系统&lt;/p&gt;&#xA;&lt;h3 id=&#34;组成&#34;&gt;组成&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;终端系统/资源子网: 提供共享的软件资源和硬件资源(如视频，音频)&lt;/li&gt;&#xA;&lt;li&gt;通信子网: 提供信息交换的网络节点和通信线路(按网线理解)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;网络类型&#34;&gt;网络类型&lt;/h3&gt;&#xA;&lt;h4 id=&#34;按拓扑结构&#34;&gt;按拓扑结构&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;星型&lt;/li&gt;&#xA;&lt;li&gt;树型&lt;/li&gt;&#xA;&lt;li&gt;总线型&lt;/li&gt;&#xA;&lt;li&gt;环型&lt;/li&gt;&#xA;&lt;li&gt;网状型&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;拓扑&#34; src=&#34;https://arkuna.pluteam.site/images/cm_topology.png&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</guid>
+      <description>&lt;h1 id=&#34;1-计算机网络概述&#34;&gt;1 计算机网络概述&lt;/h1&gt;&#xA;&lt;h2 id=&#34;计算机网络概念&#34;&gt;计算机网络概念&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;&#xA;&lt;p&gt;将具有&lt;strong&gt;独立功能&lt;/strong&gt;的&lt;strong&gt;多台计算机&lt;/strong&gt;通过&lt;strong&gt;通信线路连接&lt;/strong&gt;，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的计算机系统&lt;/p&gt;&#xA;&lt;h3 id=&#34;组成&#34;&gt;组成&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;终端系统/资源子网: 提供共享的软件资源和硬件资源(如视频，音频)&lt;/li&gt;&#xA;&lt;li&gt;通信子网: 提供信息交换的网络节点和通信线路(按网线理解)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;网络类型&#34;&gt;网络类型&lt;/h3&gt;&#xA;&lt;h4 id=&#34;按拓扑结构&#34;&gt;按拓扑结构&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;星型&lt;/li&gt;&#xA;&lt;li&gt;树型&lt;/li&gt;&#xA;&lt;li&gt;总线型&lt;/li&gt;&#xA;&lt;li&gt;环型&lt;/li&gt;&#xA;&lt;li&gt;网状型&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;拓扑&#34; src=&#34;http://localhost:1313/images/cm_topology.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>软工复习</title>
-      <link>https://arkuna.pluteam.site/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</link>
+      <link>http://localhost:1313/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sat, 22 Jun 2024 00:00:00 +0800</pubDate>
-      <guid>https://arkuna.pluteam.site/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</guid>
       <description>&lt;h1 id=&#34;软件与软件危机&#34;&gt;软件与软件危机&lt;/h1&gt;&#xA;&lt;h2 id=&#34;软件&#34;&gt;软件&lt;/h2&gt;&#xA;&lt;p&gt;在计算机系统的支持下，能完成特定功能和性能的&lt;strong&gt;程序&lt;/strong&gt;(占10%~20%)、&lt;strong&gt;数据&lt;/strong&gt;和相关的&lt;strong&gt;文档&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;分类&#34;&gt;分类&lt;/h3&gt;&#xA;&lt;h4 id=&#34;按功能&#34;&gt;按功能&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;系统软件&lt;/li&gt;&#xA;&lt;li&gt;应用软件&lt;/li&gt;&#xA;&lt;li&gt;支撑软件&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;软件危机&#34;&gt;软件危机&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;主要由软件问题引起，导致软件工程的出现&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于</title>
-      <link>https://arkuna.pluteam.site/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arkuna.pluteam.site/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Arkuna&lt;/strong&gt; 是我现在的网名，我之前的网名叫 &lt;strong&gt;Naraku&lt;/strong&gt;，叫哪一个都可以&lt;/li&gt;&#xA;&lt;li&gt;目前是在校大学生&lt;/li&gt;&#xA;&lt;li&gt;没啥特别的爱好，平常就喜欢瞎折腾&lt;/li&gt;&#xA;&lt;li&gt;游戏打的很菜，玩音游但不追求推分，其他游戏是随缘玩&lt;/li&gt;&#xA;&lt;li&gt;会写点代码，屎山制造者，有什么新点子就会立刻开堆&lt;/li&gt;&#xA;&lt;li&gt;打ctf但是不会做题，不看wp就整天卡思路的级别&lt;/li&gt;&#xA;&lt;li&gt;时刻都在为自己的菜而感到焦虑&lt;/li&gt;&#xA;&lt;li&gt;没什么远大的目标，遇到感兴趣的事就会去做  &lt;del&gt;活着就是万岁&lt;/del&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;关于博客&#34;&gt;关于博客&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用Hugo搭建，使用的主题是&lt;a href=&#34;https://github.com/rhazdon/hugo-theme-hello-friend-ng&#34;&gt;hello-friend-ng&lt;/a&gt;，自己进行了一部分&lt;a href=&#34;https://github.com/arkuna23/hugo-theme-hello-friend-ng/tree/personal&#34;&gt;修改&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;搭建个人博客的目的更偏向于记录和分享，给自己做过的事找一个地方进行记录和分类，或者是发点牢骚之类的&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;&#xA;&lt;p&gt;我也想不到能写什么，那就希望自己能做自己想干的事吧 &lt;del&gt;(我也不知道自己想要干什么)&lt;/del&gt;  ，在人生中能少一些后悔吧&lt;/p&gt;</description>
     </item>
   </channel>
