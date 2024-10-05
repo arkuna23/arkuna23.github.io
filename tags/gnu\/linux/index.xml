@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNU\/Linux on Arkuna&#39;s nonsense</title>
+    <link>http://localhost:1313/tags/gnu%5C/linux/</link>
+    <description>Recent content in GNU\/Linux on Arkuna&#39;s nonsense</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 14 Aug 2024 21:37:21 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gnu%5C/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Debian上构建和运行Vaultwarden</title>
+      <link>http://localhost:1313/posts/%E5%9C%A8debian%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</link>
+      <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%9C%A8debian%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
+      <description>前言 Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目 Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站</description>
+    </item>
+  </channel>
+</rss>

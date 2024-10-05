@@ -6,7 +6,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 14 Aug 2024 21:37:21 +0800</lastBuildDate>
+        <lastBuildDate>Sat, 05 Oct 2024 17:18:42 +0800</lastBuildDate>
         <atom:link href="https://arkuna.pluteam.site/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
@@ -15,7 +15,10 @@
             <pubDate>Wed, 14 Aug 2024 21:37:21 +0800</pubDate>
             
             <guid>https://arkuna.pluteam.site/posts/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8Cvaultwarden/</guid>
-            <description>前言 Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目 Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站</description>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目
+Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站登录凭据）&lt;/p&gt;</description>
             <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <blockquote>
 <p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目
@@ -142,7 +145,7 @@ SIGNUPS_ALLOWED=true
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reload
 </span></span><span style="display:flex;"><span>sudo systemctl enable --now vaultwarden.service
 </span></span></code></pre></div><p>完工</p>
-<p>不知道为什么我使用域名没法登录，只能直接使用ip，可能是有什么地方没配好
+<p>不知道为什么我使用域名没法登录，只能直接使用ip，可能是有什么地方没配好(我不是很想用反代)
 使用浏览器插件或者是客户端登录使用即可</p>
 ]]></content>
         </item>
@@ -153,7 +156,10 @@ SIGNUPS_ALLOWED=true
             <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
             
             <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
-            <description>我自己正在使用的配置: Github 目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面 动机 我的工作环境从w</description>
+            <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;
+&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+&lt;p&gt;我的工作环境从windows迁移到linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>我自己正在使用的配置: <a href="https://github.com/arkuna23/nvim_conf">Github</a></p>
 <p>目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面</p>
 <h2 id="动机">动机</h2>

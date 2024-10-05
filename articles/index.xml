@@ -14,21 +14,21 @@
       <link>https://arkuna.pluteam.site/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0800</pubDate>
       <guid>https://arkuna.pluteam.site/articles/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</guid>
-      <description>1 操作系统引论 1.1.2 操作系统的作用 用户与计算机之间的接口 也可以说是&amp;quot;向上层提供方便易用的服务&amp;quot; 系统资源的管理者 对计算机资源的</description>
+      <description>&lt;h1 id=&#34;1-操作系统引论&#34;&gt;1 操作系统引论&lt;/h1&gt;&#xA;&lt;h2 id=&#34;112-操作系统的作用&#34;&gt;1.1.2 操作系统的作用&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;用户与计算机之间的接口&#xA;&lt;ul&gt;&#xA;&lt;li&gt;也可以说是&amp;quot;向上层提供方便易用的服务&amp;quot;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;系统资源的管理者&lt;/li&gt;&#xA;&lt;li&gt;对计算机资源的抽象&#xA;&lt;ul&gt;&#xA;&lt;li&gt;也可以说是&amp;quot;最接近硬件的一层软件&amp;quot;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;124-分时系统&#34;&gt;1.2.4 分时系统&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;操作性较好&lt;/p&gt;</description>
     </item>
     <item>
       <title>计网复习</title>
       <link>https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 23 Jun 2024 00:00:00 +0800</pubDate>
       <guid>https://arkuna.pluteam.site/articles/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</guid>
-      <description>1 计算机网络概述 计算机网络概念 定义 将具有独立功能的多台计算机通过通信线路连接，实现资源共享和信息传递的计算机系统 组成 终端系统/资源子网: 提供</description>
+      <description>&lt;h1 id=&#34;1-计算机网络概述&#34;&gt;1 计算机网络概述&lt;/h1&gt;&#xA;&lt;h2 id=&#34;计算机网络概念&#34;&gt;计算机网络概念&lt;/h2&gt;&#xA;&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;&#xA;&lt;p&gt;将具有&lt;strong&gt;独立功能&lt;/strong&gt;的&lt;strong&gt;多台计算机&lt;/strong&gt;通过&lt;strong&gt;通信线路连接&lt;/strong&gt;，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的计算机系统&lt;/p&gt;&#xA;&lt;h3 id=&#34;组成&#34;&gt;组成&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;终端系统/资源子网: 提供共享的软件资源和硬件资源(如视频，音频)&lt;/li&gt;&#xA;&lt;li&gt;通信子网: 提供信息交换的网络节点和通信线路(按网线理解)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;网络类型&#34;&gt;网络类型&lt;/h3&gt;&#xA;&lt;h4 id=&#34;按拓扑结构&#34;&gt;按拓扑结构&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;星型&lt;/li&gt;&#xA;&lt;li&gt;树型&lt;/li&gt;&#xA;&lt;li&gt;总线型&lt;/li&gt;&#xA;&lt;li&gt;环型&lt;/li&gt;&#xA;&lt;li&gt;网状型&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;拓扑&#34; src=&#34;https://arkuna.pluteam.site/images/cm_topology.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>软工复习</title>
       <link>https://arkuna.pluteam.site/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sat, 22 Jun 2024 00:00:00 +0800</pubDate>
       <guid>https://arkuna.pluteam.site/articles/%E8%BD%AF%E5%B7%A5%E5%A4%8D%E4%B9%A0/</guid>
-      <description>软件与软件危机 软件 在计算机系统的支持下，能完成特定功能和性能的程序(占10%~20%)、数据和相关的文档 分类 按功能 系统软件 应用软件 支撑软件 软</description>
+      <description>&lt;h1 id=&#34;软件与软件危机&#34;&gt;软件与软件危机&lt;/h1&gt;&#xA;&lt;h2 id=&#34;软件&#34;&gt;软件&lt;/h2&gt;&#xA;&lt;p&gt;在计算机系统的支持下，能完成特定功能和性能的&lt;strong&gt;程序&lt;/strong&gt;(占10%~20%)、&lt;strong&gt;数据&lt;/strong&gt;和相关的&lt;strong&gt;文档&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;分类&#34;&gt;分类&lt;/h3&gt;&#xA;&lt;h4 id=&#34;按功能&#34;&gt;按功能&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;系统软件&lt;/li&gt;&#xA;&lt;li&gt;应用软件&lt;/li&gt;&#xA;&lt;li&gt;支撑软件&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;软件危机&#34;&gt;软件危机&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;主要由软件问题引起，导致软件工程的出现&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

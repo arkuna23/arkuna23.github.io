@@ -14,7 +14,7 @@
       <link>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Wed, 24 Jul 2024 20:22:45 +0800</pubDate>
       <guid>https://arkuna.pluteam.site/posts/%E6%88%91%E7%9A%84neovim%E9%85%8D%E7%BD%AE/</guid>
-      <description>我自己正在使用的配置: Github 目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面 动机 我的工作环境从w</description>
+      <description>&lt;p&gt;我自己正在使用的配置: &lt;a href=&#34;https://github.com/arkuna23/nvim_conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;目前还没在新环境做测试，并且只在Arch Linux这一个发行版上使用，遇到的问题我都会补充在下面&lt;/p&gt;&#xA;&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;&#xA;&lt;p&gt;我的工作环境从windows迁移到linux有一段时间了，使用习惯逐渐向终端靠拢，正好尝试下neovim这类编辑器&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
